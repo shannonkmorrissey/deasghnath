@@ -1,0 +1,23 @@
+notes
+
+DAY 1/
+
+DAY 2/
+START: 2026.02.011 21:41 CST
+END: 2026.02.11 22:08 CST
+
+google search: 
+how to add accented character in type p5js
+
+p5js ref search:
+
+
+errors (not exhaustive):
+Uncaught (in promise) ReferenceError: assets is not defined
+Uncaught (in promise) ReferenceError: novaCut is not defined
+Uncaught (in promise) Error: null font in textFont()
+
+
+summary: learned await and async to solve font not loading correctly
+
+DAY 3/
