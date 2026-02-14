@@ -24,82 +24,32 @@ Design and Documentation Constraints:
 a note on constraints: this is a work in progress, and I may alter these constraints slightly, while keeping the essence of the project the same, as I learn along the way what I want to document and how, and what could make for a more interesting and fulfilling practice.
 
 ***********************
-notes template start 
 
-DAY #/
-START: 
-END: 
-
-google search: 
--
-
-p5js ref search:
--
-
-errors (not exhaustive):
--
-
-summary:
--
-
-notes template end
-***********************
-
-DAY 1/
-
-DAY 2 / tuirseach
-
-START: 2026.02.011 21:41
-END: 2026.02.11 22:08
+DAY  5 / grá
+START: 2026.02.14 16:43
+END: 2026.02.14 17:15
 
 google search: 
--how to add accented character in type p5js
+-access to fetch at ... from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https,
+- uncaught in promise meaning
+
 
 p5js ref search:
--loadFont()
+- loadFont()
+
 
 errors (not exhaustive):
--Uncaught (in promise) ReferenceError: assets is not defined
--Uncaught (in promise) ReferenceError: novaCut is not defined
--Uncaught (in promise) Error: null font in textFont()
+- Access to fetch at 'file:///assets/fonts/NovaCut-Regular.ttf' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app.Understand this error
+/assets/fonts/NovaCut-Regular.ttf:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
+index.html:1 Access to fetch at 'file:///assets/fonts/NovaCut-Regular.ttf' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app.Understand this error
+/assets/fonts/NovaCut-Regular.ttf:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
+p5.min.js:1   Uncaught (in promise) TypeError: Failed to fetch
+-Uncaught (in promise) NetworkError: A network error occurred.
+-HEAD http://127.0.0.1:5500/assets/fonts/NovaCut-Regular.ttf net::ERR_ABORTED 404 (Not Found)
+-You have encountered a HTTP error
+-p5.min.js:1 WARN: No glyph data for 'NovaCut-Regular', retrying as FontFace
 
 summary:
--learned await and async to solve font not loading correctly
+-for some reason the font wouldn't load and the sketch was blank when i opened it today. spent the first 15 minutes debugging looking into errors. based on my research I thought it might have something to do with the file path, but it looked correct to me. since it's a google font and i saw you could load the font via linking it, i did that instead and it worked. spent the rest of the time playing around with the for loop steps until i arrived at something that was satisfactory to me and visually interesting.
 
-DAY 3 / fuinneamh
-
-START: 2026.02.12 23:08
-END: 2026.02.12 23:32
-
-google search:
-- multi line comments in p5js
-
-p5js ref search:
-- map function
-
-errors (not exhaustive):
-- none
-
-summary:
-- remembered map function so wanted to see what it would do with color and mouse position, played around with frame count too because I wanted it to move on its own but couldn't remember any other functions to use 
-
-DAY 4 / 
-START: 2026.02.13 22:52
-END: 2026.02.13 23:34
-
-google search: 
-- should you not use a for loop in draw p5js
-
-p5js ref search:
-- for loop
-- range (no results)
-- text()
-- clear()
-
-errors (not exhaustive):
--
-
-summary:
-- wanted to try a for loop again, forgot what would happen. got unexpected result. it was just a giant solid color at first because i was using it to draw the text on the canvas, x++, y++ while less than the width and height, respectively. took me a minute to realize what was happening. it was a classic case of it's happening so fast (60 fps) that I don't see what's happening. my computer got HOT and the fan was whirring like I've never heard before...lol. no errors though. I didn't create an infinite loop. did I? I'm still a little bit confused. I used print() to see what the x and y values were and it was looping starting over at 0 til it reached the max. maybe because it was in draw, it was looping?
-
-I stopped at at around 25 minutes to work according to my constraints but my curiosity was killing me so i went back and put the loop in setup and that didn't help explain what was happening. then i put it back in draw and changed the step from x++ and y++ to x+=20 and y+=20 and it made sense!!!
+i also figured out how to turn off ai inline suggestions. it was suggesting code for every line i wrote, and while helpful especially because I'm learning, i want to think for myself. maybe it's helpful for speed for people who know what they're doing, but i think it was interfering too much with my thought process.

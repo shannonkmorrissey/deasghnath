@@ -1,38 +1,30 @@
 /*
-the word "deasghnáth" moves across a black background from top left to bottom right, changing fill color as it goes. the stroke color changes
-according to mouse position on the canvas.
+the word "deasghnáth" with no fill and black outline is displayed across the gray canvas many times, overlapping in areas.
 */
 
 let novaCut;
 
 async function setup() {
     createCanvas(800, 600);
-    novaCut = await loadFont('/assets/fonts/NovaCut-Regular.ttf');
+    novaCut = await loadFont("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nova+Cut&display=swap");
 }
 
 function draw() {
     background(100);
     textFont(novaCut);
-    fill(150, 100, 200);
+    fill(0);
+    stroke(0);
     strokeWeight(4);
-    stroke(map(mouseX, 0, 800, 0, 255), map(mouseY, 0, 800, 0, 255), map(mouseY, 0, 800, 0, 255));
     textSize(100);
     textAlign(CENTER, CENTER);
-    // text("deasghnáth", width / 2 + sin(frameCount)*5, height /2 + cos(frameCount)*5);
-    // textSize(50);
-    // text("deasghnáth", width / 2 + cos(frameCount)*5, height /2 +sin(frameCount)*5);
-    // textSize(50);
-    // text("deasghnáth", width / 2 + cos(frameCount/5)*50, height /2 +sin(frameCount/5)*50);
     
-    //noStroke();
-    //noFill();
+    noFill();
 
-    for (let x = 0; x < 300; x+=20) {
-        for (let y = 0; y < 300; y+=20) {
+    for (let x = 0; x < width; x+=200) {
+        for (let y = 0; y < height; y+=120) {
             text("deasghnáth", x, y);
             //print(x, y);
         }
     }
-
 
 }
