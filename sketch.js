@@ -11,12 +11,28 @@ async function setup() {
 }
 
 function draw() {
-    background(0);
+    background(100);
     textFont(novaCut);
-    fill(map(frameCount, 0, 800, 0, 255), 100, map(frameCount, 0, 800, 0, 255));
-    strokeWeight(9);
+    fill(150, 100, 200);
+    strokeWeight(4);
     stroke(map(mouseX, 0, 800, 0, 255), map(mouseY, 0, 800, 0, 255), map(mouseY, 0, 800, 0, 255));
     textSize(100);
     textAlign(CENTER, CENTER);
-    text("deasghnáth", frameCount, frameCount);
+    // text("deasghnáth", width / 2 + sin(frameCount)*5, height /2 + cos(frameCount)*5);
+    // textSize(50);
+    // text("deasghnáth", width / 2 + cos(frameCount)*5, height /2 +sin(frameCount)*5);
+    // textSize(50);
+    // text("deasghnáth", width / 2 + cos(frameCount/5)*50, height /2 +sin(frameCount/5)*50);
+    
+    //noStroke();
+    //noFill();
+
+    for (let x = 0; x < 300; x+=20) {
+        for (let y = 0; y < 300; y+=20) {
+            text("deasghnáth", x, y);
+            //print(x, y);
+        }
+    }
+
+
 }

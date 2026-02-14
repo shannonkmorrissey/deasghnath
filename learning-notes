@@ -5,7 +5,7 @@ UIC School of Design
 Spring 2026
 
 This sketch is an ongoing project as part of establishing and documenting a personal daily practice
-in computational design. I have chosen to create a progressively evolving sketch of the Irish word "deasghnáth," which translates to "rite, ceremony; ceremonial act, formality" according to Foclóir Gaeilge-Béarla (Ó Dónaill, 1977). Through this practice, I aim to reserve a daily opportunity for myself to give  sustained effort in learning and practicing creative coding, while dedicating time to reflect and ground myself in my personal experience and thought process. There is no goal other than to simply "keep making and see what happens." By absolving myself of the pressure of achieving a certain result or meeting certain standards, I will lower the stakes and allow myself to make and learn at my own pace. Though I am doing this for nobody but myself, I am making this public to hold myself accountable. What will my sketches look like when I can do (almost) whatever I want? Where will my curiosity lead me? I hope when this practice inevitably ends, that what I have to show for it with my documentation and the work itself will be insightful, helpful, and maybe fun to look and and interact with too.
+in computational design. I have chosen to create a progressively evolving sketch of the Irish word "deasghnáth," which translates to "rite, ceremony; ceremonial act, formality" according to Foras na Gaeilge’s New English-Irish Dictionary (2013-2017). Through this practice, I aim to reserve a daily opportunity for myself to give  sustained effort in learning and practicing creative coding, while dedicating time to reflect and ground myself in my personal experience and thought process. There is no goal other than to simply "keep making and see what happens." By absolving myself of the pressure of achieving a certain result or meeting certain standards, I will lower the stakes and allow myself to make and learn at my own pace. Though I am doing this for nobody but myself, I am making this public to hold myself accountable. What will my sketches look like when I can do (almost) whatever I want? Where will my curiosity lead me? I hope when this practice inevitably ends, that what I have to show for it with my documentation and the work itself will be insightful, helpful, and maybe fun to look and and interact with too.
 
 
 Design and Documentation Constraints:
@@ -18,7 +18,7 @@ Design and Documentation Constraints:
     - what you searched for help on (google, p5js reference, an llm). record exact searches where possible.
     - errors encountered in the console (not to have an exhaustive list, just to note any errors that you deem important for understanding your learning), including any solutions, workarounds, or surrenders,
     - a summary of your process, reflecting on what you like, don't like, what was invigorating, what was frustrating, what you learned, how you feel etc.
-- git commit with the message being a new word in Irish that you feel is relevant (to whatever you want it to be relevant to in that moment i.e., to your mood, the sketch itself, current events, etc.)
+- git commit with the message being a new word in Irish (using the Foclóir Béarla-Gaeilge) that you feel is relevant (to whatever you want it to be relevant to in that moment i.e., to your mood, the sketch itself, current events, etc.).
 - pick up the next day where you left off.
 
 a note on constraints: this is a work in progress, and I may alter these constraints slightly, while keeping the essence of the project the same, as I learn along the way what I want to document and how, and what could make for a more interesting and fulfilling practice.
@@ -27,22 +27,20 @@ a note on constraints: this is a work in progress, and I may alter these constra
 notes template start 
 
 DAY #/
-START: yyyy.mm.dd hh:mm
-END: yyyy.mm.dd hh:mm
+START: 
+END: 
 
 google search: 
--how to add accented character in type p5js
+-
 
 p5js ref search:
--loadFont()
+-
 
 errors (not exhaustive):
--Uncaught (in promise) ReferenceError: assets is not defined
--Uncaught (in promise) ReferenceError: novaCut is not defined
--Uncaught (in promise) Error: null font in textFont()
+-
 
 summary:
--learned await and async to solve font not loading correctly
+-
 
 notes template end
 ***********************
@@ -85,3 +83,23 @@ errors (not exhaustive):
 summary:
 - remembered map function so wanted to see what it would do with color and mouse position, played around with frame count too because I wanted it to move on its own but couldn't remember any other functions to use 
 
+DAY 4 / 
+START: 2026.02.13 22:52
+END: 2026.02.13 23:34
+
+google search: 
+- should you not use a for loop in draw p5js
+
+p5js ref search:
+- for loop
+- range (no results)
+- text()
+- clear()
+
+errors (not exhaustive):
+-
+
+summary:
+- wanted to try a for loop again, forgot what would happen. got unexpected result. it was just a giant solid color at first because i was using it to draw the text on the canvas, x++, y++ while less than the width and height, respectively. took me a minute to realize what was happening. it was a classic case of it's happening so fast (60 fps) that I don't see what's happening. my computer got HOT and the fan was whirring like I've never heard before...lol. no errors though. I didn't create an infinite loop. did I? I'm still a little bit confused. I used print() to see what the x and y values were and it was looping starting over at 0 til it reached the max. maybe because it was in draw, it was looping?
+
+I stopped at at around 25 minutes to work according to my constraints but my curiosity was killing me so i went back and put the loop in setup and that didn't help explain what was happening. then i put it back in draw and changed the step from x++ and y++ to x+=20 and y+=20 and it made sense!!!
