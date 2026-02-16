@@ -10,20 +10,27 @@ async function setup() {
 }
 
 function draw() {
-    background(100);
+    background(100, 0, 250);
     textFont(novaCut);
-    fill(0);
-    stroke(0);
-    strokeWeight(4);
-    textSize(100);
+    stroke(150);
+    strokeWeight(1);
+    textSize(random(148,150));
     textAlign(CENTER, CENTER);
-    
     noFill();
 
     for (let x = 0; x < width; x+=200) {
-        for (let y = 0; y < height; y+=120) {
-            text("deasghnáth", x, y);
+        for (let y = 0; y < height+200; y+=120) {
+            text("deasghnáth", x, x);
             //print(x, y);
+        }
+    }
+    for (let x = 0; x < width+100; x+=100) {
+        for (let y = 0; y < height+200; y+=100) {
+            text("deasghnáth", y, x);
+            push();
+            fill(130);
+            square(x, y, 200);
+            pop();
         }
     }
 

@@ -25,31 +25,22 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  5 / grá
-START: 2026.02.14 16:43
-END: 2026.02.14 17:15
+DAY  6 / greille
+START: 2026.02.15 23:49
+END: 2026.02.16 00:14
 
 google search: 
--access to fetch at ... from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https,
-- uncaught in promise meaning
-
+-
 
 p5js ref search:
-- loadFont()
-
+- if statement
+- square()
+- push and pop
 
 errors (not exhaustive):
-- Access to fetch at 'file:///assets/fonts/NovaCut-Regular.ttf' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app.Understand this error
-/assets/fonts/NovaCut-Regular.ttf:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
-index.html:1 Access to fetch at 'file:///assets/fonts/NovaCut-Regular.ttf' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app.Understand this error
-/assets/fonts/NovaCut-Regular.ttf:1  Failed to load resource: net::ERR_FAILEDUnderstand this error
-p5.min.js:1   Uncaught (in promise) TypeError: Failed to fetch
--Uncaught (in promise) NetworkError: A network error occurred.
--HEAD http://127.0.0.1:5500/assets/fonts/NovaCut-Regular.ttf net::ERR_ABORTED 404 (Not Found)
--You have encountered a HTTP error
--p5.min.js:1 WARN: No glyph data for 'NovaCut-Regular', retrying as FontFace
+- Uncaught (in promise) ReferenceError: y is not defined
 
 summary:
--for some reason the font wouldn't load and the sketch was blank when i opened it today. spent the first 15 minutes debugging looking into errors. based on my research I thought it might have something to do with the file path, but it looked correct to me. since it's a google font and i saw you could load the font via linking it, i did that instead and it worked. spent the rest of the time playing around with the for loop steps until i arrived at something that was satisfactory to me and visually interesting.
-
-i also figured out how to turn off ai inline suggestions. it was suggesting code for every line i wrote, and while helpful especially because I'm learning, i want to think for myself. maybe it's helpful for speed for people who know what they're doing, but i think it was interfering too much with my thought process.
+- the code is always right....? it always does exactly what I'm telling it to do.
+- I'm having fun. thought I kind of wish i could spend hours a day playing with code instead of just 20-30 minutes.
+but i have so many other projects to work on.
