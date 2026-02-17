@@ -25,22 +25,27 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  6 / greille
-START: 2026.02.15 23:49
-END: 2026.02.16 00:14
+DAY  7 / gan codladh
+START: 2026.02.16 21:10
+END: 2026.02.16 21:42
 
-google search: 
--
+chatgpt prompt:
+-why isn't the font loading
 
 p5js ref search:
-- if statement
-- square()
-- push and pop
+- text
+- textToContours()
 
 errors (not exhaustive):
-- Uncaught (in promise) ReferenceError: y is not defined
+- Uncaught SyntaxError: missing ) after argument list (at sketch.js:21:63)
+- Uncaught (in promise) Error: No font data available for "Nova Cut"
+Try downloading a local copy of the font file
 
 summary:
-- the code is always right....? it always does exactly what I'm telling it to do.
-- I'm having fun. thought I kind of wish i could spend hours a day playing with code instead of just 20-30 minutes.
-but i have so many other projects to work on.
+- when I try to do textDirection() or textStyle() it breaks and the 
+canvas turns purple!
+- wanted to do textToContours, but i think that requires the use of a loaded font
+so i tried loading a font from assets but the path wasn't working... can't figure it out.
+- i asked chat gpt (copied the code and asked why isn't the font loading?) so apparently i had an extra / in the beginning of the file path... i removed it and now the canvas is all purple
+- i tried several fonts and they all werent working, and then one worked!
+- i just copied the code from the p5.js ref example, but I'm glad i got it working
