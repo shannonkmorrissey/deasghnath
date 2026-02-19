@@ -25,27 +25,25 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  7 / gan codladh
-START: 2026.02.16 21:10
-END: 2026.02.16 21:42
+DAY  8 / súile
+START: 2026.02.18 23:41
+END: 2026.02.19 00:05
+
+google search:
+- how to slow down random p5js
 
 chatgpt prompt:
--why isn't the font loading
+-
 
 p5js ref search:
-- text
-- textToContours()
+- describe()
 
 errors (not exhaustive):
-- Uncaught SyntaxError: missing ) after argument list (at sketch.js:21:63)
-- Uncaught (in promise) Error: No font data available for "Nova Cut"
-Try downloading a local copy of the font file
+- Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
 
 summary:
-- when I try to do textDirection() or textStyle() it breaks and the 
-canvas turns purple!
-- wanted to do textToContours, but i think that requires the use of a loaded font
-so i tried loading a font from assets but the path wasn't working... can't figure it out.
-- i asked chat gpt (copied the code and asked why isn't the font loading?) so apparently i had an extra / in the beginning of the file path... i removed it and now the canvas is all purple
-- i tried several fonts and they all werent working, and then one worked!
-- i just copied the code from the p5.js ref example, but I'm glad i got it working
+- glad to learn that there's a way to make the sketch screen reader
+accessible
+- the little squares are interesting - not really sure what's happening there, althought I know i set mouseX and Y for the first shape
+- mostly was just playing around with different values until i ended up with something cool.
+- i like the lights passing through effect and the color scheme is kind of iridescent!

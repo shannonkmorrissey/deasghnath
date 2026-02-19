@@ -10,13 +10,13 @@ async function setup() {
 }
 
 function draw() {
-    background(100, 0, 250);
+    background(random(0,255), random(0,255), random(0, 255), 10);
     textFont(font);
-    stroke(150);
-    strokeWeight(1);
-    textSize(random(148,150));
+    stroke(100);
+    strokeWeight(10);
+    textSize(130);
     textAlign(CENTER, CENTER);
-    noFill();
+    //noFill();
 
     let contours = font.textToContours('deasghnáth', width/2, height/2, {sampleFactor: 0.5});
 
@@ -24,13 +24,21 @@ function draw() {
         for (const pts of contours) {
             beginContour();
             for (const pt of pts) {
-                vertex(pt.x + 5*sin(pt.y*0.1 + millis()*0.01), pt.y);
+                vertex(mouseY + 5*sin(pt.x*0.1 + millis()*.05), mouseX);
             }
             endContour(CLOSE);
         }
     endShape();
 
-    describe('The text deasghnáth wobbling over time');
+    beginShape();
+        for (const pts of contours) {
+            beginContour();
+            for (const pt of pts) {
+                vertex(pt.x + 5*sin(pt.x*0.1 + millis()*0.01), pt.y);
+            }
+            endContour(CLOSE);
+        }
+    endShape();
 
     // for (let x = 0; x < width; x+=200) {
     //     for (let y = 0; y < height+200; y+=120) {
