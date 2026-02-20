@@ -25,25 +25,29 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  8 / súile
-START: 2026.02.18 23:41
-END: 2026.02.19 00:05
+DAY  9 / dromlach
+START: 2026.02.19 21:33
+END: 2026.02.19 22:04
 
 google search:
-- how to slow down random p5js
+- p5js writing accessible descriptions
+- aria states and properties
 
 chatgpt prompt:
 -
 
 p5js ref search:
-- describe()
+- lerpColor()
+- typography
 
 errors (not exhaustive):
-- Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
+- Uncaught (in promise) ReferenceError: Cannot access 'fromColor' before initialization
+- Uncaught ReferenceError: color is not defined
 
 summary:
-- glad to learn that there's a way to make the sketch screen reader
-accessible
-- the little squares are interesting - not really sure what's happening there, althought I know i set mouseX and Y for the first shape
-- mostly was just playing around with different values until i ended up with something cool.
-- i like the lights passing through effect and the color scheme is kind of iridescent!
+- no function for adjusting the tracking or letterspacing of type?
+- used lerpColor() for stroke color and had the variables outside of setup and draw, and it wasn't working
+so i moved them to inside draw and it worked.
+- increased the sample factor in textToContours and it made the waviness slower, which i like. it seems kinda glitchy.
+especially with the double layer of text. i also adjusted the values in vertex() in the for loops and it made the text
+kinda crunched which is cool. not really sure what I'm doing but its fun to change something and see what happens.
