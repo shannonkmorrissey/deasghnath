@@ -1,48 +1,43 @@
-/*
-the word "deasghnáth" with no fill and black outline is displayed across the gray canvas many times, overlapping in areas.
-*/
-
 let font;
-
+let fromColor;
+let toColor;
+let lerpedColor;
 
 async function setup() {
-    createCanvas(800, 600);
+    createCanvas(800, 600, WEBGL);
+    describe();
+
     font = await loadFont('assets/fonts/SpaceGrotesk-SemiBold.ttf');
 }
 
 function draw() {
-    let fromColor = color(100,100,100);
-    let toColor = color(0, 203, 129);
-    let lerpedColor = lerpColor(fromColor, toColor, 0.5);
+
+    fromColor = color(100);
+    toColor = color(100, 25, 129);
+    lerpedColor = lerpColor(fromColor, toColor, 0.5);
     background(20);
+    quad(mouseX,200,-50,100,mouseY,-100,-200,50);
+    quad(mouseY,200,-50,100,mouseX,-100,-200,50);
     textFont(font);
     stroke(lerpedColor);
-    strokeWeight(.5);
+    strokeWeight(1);
     textSize(130);
     textAlign(CENTER, CENTER);
-    fill(0);
-    //noFill();
+    fill(203, 222);
 
-    let contours = font.textToContours('deasghnáth', width/2, height/2, {sampleFactor: 50});
-
-    beginShape();
-        for (const pts of contours) {
-            beginContour();
-            for (const pt of pts) {
-                vertex(pt.x + 5*sin(pt.x*0.5 + millis()*.01), pt.y);
-            }
-            endContour(CLOSE);
-        }
-    endShape();
+    let contours = font.textToContours('deasghnáth', 0,
+        0, {sampleFactor: .5});
 
     beginShape();
         for (const pts of contours) {
             beginContour();
             for (const pt of pts) {
-                vertex(pt.x + 5*sin(pt.x*0.1 + millis()*0.05), pt.y);
+                vertex(pt.x + 2*sin(pt.x*1 + millis()*.01), pt.y, 50);
             }
             endContour(CLOSE);
         }
     endShape();
+    // print(millis()*0.1); always increasing. this is why the contour
+    // points appear to move
 
-}
+    }

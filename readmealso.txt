@@ -25,29 +25,33 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  9 / dromlach
-START: 2026.02.19 21:33
-END: 2026.02.19 22:04
+DAY  10 / 
+START: 2026.02.19 21:05
+END: 2026.02.19 21:35
 
 google search:
-- p5js writing accessible descriptions
-- aria states and properties
+- 
 
 chatgpt prompt:
 -
 
 p5js ref search:
-- lerpColor()
-- typography
+- quad()
+- vertex()
+- shape
 
 errors (not exhaustive):
-- Uncaught (in promise) ReferenceError: Cannot access 'fromColor' before initialization
-- Uncaught ReferenceError: color is not defined
+- Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this error
+- p5.Geometry.prototype._getFaceNormal: face has colinear sides or a repeated vertex
 
 summary:
-- no function for adjusting the tracking or letterspacing of type?
-- used lerpColor() for stroke color and had the variables outside of setup and draw, and it wasn't working
-so i moved them to inside draw and it worked.
-- increased the sample factor in textToContours and it made the waviness slower, which i like. it seems kinda glitchy.
-especially with the double layer of text. i also adjusted the values in vertex() in the for loops and it made the text
-kinda crunched which is cool. not really sure what I'm doing but its fun to change something and see what happens.
+- tried webgl bc why the hell not
+- played around with interactive vertices of quads, turned out to make
+a cool little origami like structure
+- actually took the time to try to understand textToContours and it kinda
+makes sense. to make the appearance of oscillating movement sin has to be connected to
+a constantly changing value. the p5js example tied it to time in millis.
+- kinda wondering about the toll this takes on my cpu bc sometimes
+my computer gets a bit warmer than usual when im running this. maybe i 
+shouldn't have it on autosave and golive where it's constantly running.
+- i want to get better at practicing things like loops and different statements
