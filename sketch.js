@@ -2,12 +2,20 @@ let font;
 let fromColor;
 let toColor;
 let lerpedColor;
+let running = false;
 
 async function setup() {
     createCanvas(800, 600, WEBGL);
-    describe();
+    describe('black background with the word deasghnáth in light\
+        translucent purple. each letter is moving around in a\
+        glitch-like manner.  triangular shapes in the same translucent\
+        purple appear behind the word. the vertices of the triangles\
+        and the position of the word change according to mouse movement'
+        );
 
     font = await loadFont('assets/fonts/SpaceGrotesk-SemiBold.ttf');
+
+    noLoop();
 }
 
 function draw() {
@@ -24,8 +32,7 @@ function draw() {
     // font.textToContours('string', x-pos, y-pos, options)
     // converts text outlines as points in a contour array
     // won't do anything yet on the canvas, just stores the data
-    let contours = font.textToContours('deasghnáth', 0,
-        0, {sampleFactor: 2});
+    
         // last parameter, options:
         // "simplifyThreshold removes collinear points if it's set to 
         // a number other than 0. The value represents the threshold 
@@ -36,7 +43,9 @@ function draw() {
         // number of samples. It defaults to 0.1. Higher values produce
         // more points along the path and are more precise.
 
-        //
+    let contours = font.textToContours('deasghnáth', mouseX-200,
+        0, {sampleFactor: 2});
+
     beginShape();
         for (const pts of contours) {
             beginContour();
@@ -50,4 +59,16 @@ function draw() {
             endContour(CLOSE);
         }
     endShape();
+
     }
+
+// toggles sketch on and off
+function toggleSketch(){
+    running = !running;
+
+    if (running) {
+        loop();
+    } else {
+        noLoop();
+    }
+}

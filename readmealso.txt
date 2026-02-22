@@ -25,23 +25,29 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  11 / prionta
-START: 2026.02.21 22:08
-END: 2026.02.21 22:41
+DAY  12 / spéir bán
+START: 2026.02.22 09:00
+END: 2026.02.22 09:50
 
 google search:
-- 
+- how to stop running p5js sketch with code
+- css positions
+- how to make a string go across lines in code js
 
 chatgpt prompt:
-- explain how this code snippet works (provided texttocontours and for loop)
+- how would i create start and stop buttons in html and javascript for starting and stopping an entire p5js sketch in the browser?
 
 p5js ref search:
-- textToContours()
+- browsed tutorials page
 
 errors (not exhaustive):
-- [.WebGL-0x10c004a8400] GL_INVALID_ENUM: glDrawArrays: Invalid draw mode.
-
+- Uncaught SyntaxError: Invalid or unexpected token
 
 summary:
-- another effort to better understand textToContours and I think I really get it now.
-- i like testing values and pushing them to their limits and being surprised.
+- created a start/stop button in html/js bc i dont want the sketch constantly running
+- maybe i can turn off autosave in vscode but that's scary!
+- writing noLoop() in setup and commenting it out may be the better option 
+though because every time i make a change in anything, including this, 
+it autosaves and the sketch restarts, so the button would have to be
+pressed again to stop it.
+- im manipulating html, css, and javascript all together and it's electrifying
