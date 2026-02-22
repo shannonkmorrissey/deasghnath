@@ -25,33 +25,23 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  10 / 
-START: 2026.02.19 21:05
-END: 2026.02.19 21:35
+DAY  11 / prionta
+START: 2026.02.21 22:08
+END: 2026.02.21 22:41
 
 google search:
 - 
 
 chatgpt prompt:
--
+- explain how this code snippet works (provided texttocontours and for loop)
 
 p5js ref search:
-- quad()
-- vertex()
-- shape
+- textToContours()
 
 errors (not exhaustive):
-- Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this error
-- p5.Geometry.prototype._getFaceNormal: face has colinear sides or a repeated vertex
+- [.WebGL-0x10c004a8400] GL_INVALID_ENUM: glDrawArrays: Invalid draw mode.
+
 
 summary:
-- tried webgl bc why the hell not
-- played around with interactive vertices of quads, turned out to make
-a cool little origami like structure
-- actually took the time to try to understand textToContours and it kinda
-makes sense. to make the appearance of oscillating movement sin has to be connected to
-a constantly changing value. the p5js example tied it to time in millis.
-- kinda wondering about the toll this takes on my cpu bc sometimes
-my computer gets a bit warmer than usual when im running this. maybe i 
-shouldn't have it on autosave and golive where it's constantly running.
-- i want to get better at practicing things like loops and different statements
+- another effort to better understand textToContours and I think I really get it now.
+- i like testing values and pushing them to their limits and being surprised.

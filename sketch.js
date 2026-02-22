@@ -12,32 +12,42 @@ async function setup() {
 
 function draw() {
 
-    fromColor = color(100);
-    toColor = color(100, 25, 129);
-    lerpedColor = lerpColor(fromColor, toColor, 0.5);
     background(20);
-    quad(mouseX,200,-50,100,mouseY,-100,-200,50);
-    quad(mouseY,200,-50,100,mouseX,-100,-200,50);
+    quad(100,200,-50,100,mouseY,-100,-200,50);
+    quad(50,200,-30,300,mouseX,-100,-300,80);
     textFont(font);
-    stroke(lerpedColor);
+    stroke(0);
     strokeWeight(1);
     textSize(130);
     textAlign(CENTER, CENTER);
-    fill(203, 222);
-
+    fill('rgba(203, 21, 192, .2)');
+    // font.textToContours('string', x-pos, y-pos, options)
+    // converts text outlines as points in a contour array
+    // won't do anything yet on the canvas, just stores the data
     let contours = font.textToContours('deasghnáth', 0,
-        0, {sampleFactor: .5});
+        0, {sampleFactor: 2});
+        // last parameter, options:
+        // "simplifyThreshold removes collinear points if it's set to 
+        // a number other than 0. The value represents the threshold 
+        // angle in radians to use when determining whether two edges 
+        // are collinear."
 
+        // sampleFactor is the ratio of the text's path length to the
+        // number of samples. It defaults to 0.1. Higher values produce
+        // more points along the path and are more precise.
+
+        //
     beginShape();
         for (const pts of contours) {
             beginContour();
             for (const pt of pts) {
-                vertex(pt.x + 2*sin(pt.x*1 + millis()*.01), pt.y, 50);
+                vertex(pt.x+50*sin(millis()*.5), pt.y+5*sin(millis()*.7));
+            // vertex(
+            // pt.x = original point
+            // + 10 = pixel distortion amt
+            // sin... = provides oscillating value bc tied to millis)
             }
             endContour(CLOSE);
         }
     endShape();
-    // print(millis()*0.1); always increasing. this is why the contour
-    // points appear to move
-
     }
