@@ -25,29 +25,33 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  12 / spéir bán
-START: 2026.02.22 09:00
-END: 2026.02.22 09:50
+DAY  13 / bheith nimhneach
+START: 2026.02.23 23:18
+END: 2026.02.23 23:50
 
 google search:
-- how to stop running p5js sketch with code
-- css positions
-- how to make a string go across lines in code js
+- nested for loops js
 
 chatgpt prompt:
-- how would i create start and stop buttons in html and javascript for starting and stopping an entire p5js sketch in the browser?
+- 
 
 p5js ref search:
-- browsed tutorials page
+- for loops
 
 errors (not exhaustive):
-- Uncaught SyntaxError: Invalid or unexpected token
+- 
 
 summary:
-- created a start/stop button in html/js bc i dont want the sketch constantly running
-- maybe i can turn off autosave in vscode but that's scary!
-- writing noLoop() in setup and commenting it out may be the better option 
-though because every time i make a change in anything, including this, 
-it autosaves and the sketch restarts, so the button would have to be
-pressed again to stop it.
-- im manipulating html, css, and javascript all together and it's electrifying
+- cleaned up a bit and started a new direction. i want to get better at for loops
+so i made one and then just ended up playing around with the starting value, step, and
+ limit until I came to a pleasing result. i also changed the font because i was getting
+ sick of the other one. i might want to change the font often. i'm not sure if that
+ won't be good for the long run of this project, but the ttf files are pretty small
+ so I'm going to keep doing it for now. 
+ - my computer got really hot again when i tried nesting a for loop...i didn't 
+ get any errors, but maybe it was doing a lot. i want to understand what takes
+ up so much CPU.
+ - still don't really understand git and github. i want to be able to put all
+ these versions on a webpage at the end of this, and it would be nice if I could 
+ start building that now and incorporate placing these sketches in there into 
+ my daily practice.

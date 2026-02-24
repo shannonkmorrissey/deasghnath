@@ -13,6 +13,5 @@ body {
 }
 
 #start-stop {
-    position: fixed;
-    bottom: 100px;
+    top: 2px;
 }
