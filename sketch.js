@@ -2,31 +2,22 @@ let font;
 let running;
 
 async function setup() {
-    noLoop();
+    //noLoop();
     createCanvas(800, 600);
-    describe('dark grey solid background with the word deasghnáth in the center\
-        in translucent hot pink bubble letters with thin white outline. the word\
-        is printed over and over again, each word on top of the last, and\
-        the text increases by 6 pixels in size each time, giving the illusion\
-        that the text creates a 3D shape coming toward the viewer. The word \
-        moves left and right according to mouse X position.'
+    describe('with the drag of the mouse, draws the word deasghnáth\
+        in increasing sizes on top of each previous one.'
         );
+    background('rgba(222, 10, 143, .4)');
     font = await loadFont('assets/fonts/DynaPuff-Regular.ttf');
+    textOutput(LABEL);
 }
 
 function draw() {
-    background(50);
     textFont(font);
-    stroke(200);
-    strokeWeight(0.8);
+    stroke(0, .4);
+    strokeWeight(0.5);
     textAlign(CENTER, CENTER);
-    fill('rgba(203, 21, 192, .15)');
-
-    for (let y = 10; y <= height-400; y+=6) {
-        text('deasghnáth', mouseX,height/2);
-        textSize(y);
-    }
-
+    fill('rgba(69, 36, 67, 0.01)');
 }
 
 // toggles sketch on and off
@@ -37,5 +28,14 @@ function toggleSketch(){
         loop();
     } else {
         noLoop();
+    }
+}
+
+// draws the word deasghnáth in increasing sizes on top of each
+// previous one. position on the canvas is tied to the user's mouse.
+function mouseDragged() {
+    for (let y = 1; y <= height-200; y+=80) {
+        text('deasghnáth', mouseX,mouseY);
+        textSize(y/5);
     }
 }

@@ -25,33 +25,35 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  13 / bheith nimhneach
-START: 2026.02.23 23:18
-END: 2026.02.23 23:50
+DAY  14 / craiceann
+START: 2026.02.24 23:22
+END: 2026.02.24 23:51
 
 google search:
-- nested for loops js
+- 
 
 chatgpt prompt:
 - 
 
 p5js ref search:
-- for loops
+- draw
+- mouseDragged()
+- mouseClicked()
+- textOutput()
 
 errors (not exhaustive):
 - 
 
 summary:
-- cleaned up a bit and started a new direction. i want to get better at for loops
-so i made one and then just ended up playing around with the starting value, step, and
- limit until I came to a pleasing result. i also changed the font because i was getting
- sick of the other one. i might want to change the font often. i'm not sure if that
- won't be good for the long run of this project, but the ttf files are pretty small
- so I'm going to keep doing it for now. 
- - my computer got really hot again when i tried nesting a for loop...i didn't 
- get any errors, but maybe it was doing a lot. i want to understand what takes
- up so much CPU.
- - still don't really understand git and github. i want to be able to put all
- these versions on a webpage at the end of this, and it would be nice if I could 
- start building that now and incorporate placing these sketches in there into 
- my daily practice.
+- i love how quickly you can iterate and react to changes
+when designing with code. but i wonder what the limitations are. 
+it seems like it has the prospect of being all customizable, 
+but through which visible and invisible constraints?
+- what are the constraints of the programming language?
+- i arrive at a cool composition and then I'm always like "now how can I make it move?"
+- fun painting with my computer today
+- pattern of developing a code snippet, then testing different variables
+- i love just putting in random numbers and seeing what happens
+- tried textOutput() because it's kind of difficult to describe what
+is happening in a sketch for alt text, but it doesn't have any shapes
+so the description is not helpful.
