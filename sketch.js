@@ -7,17 +7,17 @@ async function setup() {
     describe('with the drag of the mouse, draws the word deasghnáth\
         in increasing sizes on top of each previous one.'
         );
-    background('rgba(222, 10, 143, .4)');
+    background('rgba(222, 10, 143, .7)');
     font = await loadFont('assets/fonts/DynaPuff-Regular.ttf');
-    textOutput(LABEL);
 }
 
 function draw() {
     textFont(font);
-    stroke(0, .4);
+    stroke(0);
     strokeWeight(0.5);
     textAlign(CENTER, CENTER);
-    fill('rgba(69, 36, 67, 0.01)');
+    //fill('rgb(69, 36, 67)');
+    noFill();
 }
 
 // toggles sketch on and off
@@ -31,11 +31,11 @@ function toggleSketch(){
     }
 }
 
-// draws the word deasghnáth in increasing sizes on top of each
+// draws the word deasghnáth in increasing sizes on top of each 
 // previous one. position on the canvas is tied to the user's mouse.
 function mouseDragged() {
-    for (let y = 1; y <= height-200; y+=80) {
-        text('deasghnáth', mouseX,mouseY);
-        textSize(y/5);
+    let wordSize = 40;
+    textSize(wordSize);
+    text('deasghnáth', mouseY, mouseX);
+    wordSize+=5;
     }
-}

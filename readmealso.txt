@@ -25,9 +25,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  14 / craiceann
-START: 2026.02.24 23:22
-END: 2026.02.24 23:51
+DAY  15 / bándearg
+START: 2026.02.25 21:26
+END: 2026.02.25 21:57
 
 google search:
 - 
@@ -36,24 +36,24 @@ chatgpt prompt:
 - 
 
 p5js ref search:
-- draw
-- mouseDragged()
-- mouseClicked()
-- textOutput()
+- tutorials
 
 errors (not exhaustive):
 - 
 
 summary:
-- i love how quickly you can iterate and react to changes
-when designing with code. but i wonder what the limitations are. 
-it seems like it has the prospect of being all customizable, 
-but through which visible and invisible constraints?
-- what are the constraints of the programming language?
-- i arrive at a cool composition and then I'm always like "now how can I make it move?"
-- fun painting with my computer today
-- pattern of developing a code snippet, then testing different variables
-- i love just putting in random numbers and seeing what happens
-- tried textOutput() because it's kind of difficult to describe what
-is happening in a sketch for alt text, but it doesn't have any shapes
-so the description is not helpful.
+- when i try something and i like the result and i feel a silly little grin
+creeping up the corners of my mouth (no fill, black thin stroke, dragging
+the word across a hot pink canvas)
+- color mode rgba works for css too! i can make the canvas translucent omg
+- lol i accidentally took the canvas away with clear()
+- the first half of today's session, i was having fun making compositions again
+- the second half, i got distracted and started reading the js writing guidlines
+from MDN on best practices for commenting code bc it was linked in the p5js 
+tutorial page on variables. i want to do a bit more of a intentional/targeted
+practice with these sessions because i want to gain a basic understanding.
+- that being said, i didn't change much in the p5 sketch today.
+-something fun: i flipped the mouse x and y for the drag function, making
+mouseY the x position and mouseX the y position. it made for a weird feeling
+when i dragged the mouse around. unorthodox but slightly exciting?! bc it 
+made it so i kind of didn't know where i was painting. unexpected results are my favorite.

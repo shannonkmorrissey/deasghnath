@@ -9,9 +9,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f0f0f0;
+    background: rgba(173, 35, 38, .4);
 }
 
 #start-stop {
+    position: fixed;
     top: 2px;
 }
