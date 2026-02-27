@@ -25,9 +25,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  15 / bándearg
-START: 2026.02.25 21:26
-END: 2026.02.25 21:57
+DAY  16 / dúch
+START: 2026.02.26 23:18
+END: 2026.02.26 00:02
 
 google search:
 - 
@@ -36,24 +36,12 @@ chatgpt prompt:
 - 
 
 p5js ref search:
-- tutorials
+- string
+- variables
 
 errors (not exhaustive):
-- 
+- Uncaught (in promise) Error: Invalid color string
 
 summary:
-- when i try something and i like the result and i feel a silly little grin
-creeping up the corners of my mouth (no fill, black thin stroke, dragging
-the word across a hot pink canvas)
-- color mode rgba works for css too! i can make the canvas translucent omg
-- lol i accidentally took the canvas away with clear()
-- the first half of today's session, i was having fun making compositions again
-- the second half, i got distracted and started reading the js writing guidlines
-from MDN on best practices for commenting code bc it was linked in the p5js 
-tutorial page on variables. i want to do a bit more of a intentional/targeted
-practice with these sessions because i want to gain a basic understanding.
-- that being said, i didn't change much in the p5 sketch today.
--something fun: i flipped the mouse x and y for the drag function, making
-mouseY the x position and mouseX the y position. it made for a weird feeling
-when i dragged the mouse around. unorthodox but slightly exciting?! bc it 
-made it so i kind of didn't know where i was painting. unexpected results are my favorite.
+- really tired today, kind of feeling like I'm doing the same thing over 
+and over again. i want to dedicate more time to this. a half an hour is not enough.

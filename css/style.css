@@ -11,8 +11,3 @@ body {
     min-height: 100vh;
     background: rgba(173, 35, 38, .4);
 }
-
-#start-stop {
-    position: fixed;
-    top: 2px;
-}
