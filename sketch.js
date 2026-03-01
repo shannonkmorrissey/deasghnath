@@ -1,41 +1,47 @@
 let font;
-let r = 0;
-let g = 0;
-let b = 0;
-
 
 async function setup() {
     //noLoop();
     createCanvas(800, 600);
-    background(150);
-    describe('the word "deasghnáth" with no color fill and a transluscent gray\
-    outline in the center of the canvas printed many times one on top\
-    of each other, getting larger with each successive occurrence so as\
-    to give the appearance of 3D movement toward the viewer. \
-    small text in the upper left corner displays the mouse x and y\
-    position as the mouse is moved across the canvas'
-    );
+    describe(' the word "deasghnáth" in black filled text with a dark grey stroke on a light\
+        grey background. each of the letters of the word change size as you move your mouse\
+        on the canvas. black text above the word denotes mouse x position. black text below the word\
+        denotes mouse y position.\
+    ');
     font = await loadFont('assets/fonts/Amarante-Regular.ttf');
 }
 
 function draw() {
-    // 
-
+    background(150);
     textFont(font);
-    stroke(0,0,0,5);
-    strokeWeight(5);
+    fill(0);
+    stroke(100);
+    strokeWeight(10);
     textAlign(CENTER, CENTER);
-    noFill();
-    for (let wordSize = 100; wordSize <140; wordSize++) {
-        textSize(wordSize);
-        fill(r, g, b);
-        text('deasghnáth', width/2, height/2);
-        r+=10;
-        g+=5;
-        b+=5;
-        //print(r, g, b);
-        //print(wordSize);
+
+    for (let wordSize = 30; wordSize <80; wordSize++) {
+        textSize(wordSize+mouseX/2);
+        text('d', 100, height/2);
+        textSize(wordSize+mouseY/2);
+        text('e', 150, height/2);
+        textSize(wordSize+mouseX/2);
+        text('a', 200, height/2);
+        textSize(wordSize+mouseY/2);
+        text('s', 250, height/2);
+        textSize(wordSize+mouseX/2);
+        text('g', 300, height/2);
+        textSize(wordSize+mouseY/2);
+        text('h', 350, height/2);
+        textSize(wordSize+mouseX/2);
+        text('n', 400, height/2);
+        textSize(wordSize+mouseY/2);
+        text('á', 450, height/2);
+        textSize(wordSize+mouseX/2);
+        text('t', 500, height/2);
+        textSize(wordSize+mouseY/2);
+        text('h', 550, height/2);
     }
+
     // mouse x coordinate appears in the center above the word "deasghnáth" and 
     // mouse y coordinate appears in the center below the word "deasghnáth"
     textSize(20);

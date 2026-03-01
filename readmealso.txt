@@ -7,7 +7,6 @@ Spring 2026
 This sketch is an ongoing project as part of establishing and documenting a personal daily practice
 in computational design. I have chosen to create a progressively evolving sketch of the Irish word "deasghnáth," which translates to "rite, ceremony; ceremonial act, formality" according to Foras na Gaeilge’s New English-Irish Dictionary (2013-2017). Through this practice, I aim to reserve a daily opportunity for myself to give  sustained effort in learning and practicing creative coding, while dedicating time to reflect and ground myself in my personal experience and thought process. There is no goal other than to simply "keep making and see what happens." By absolving myself of the pressure of achieving a certain result or meeting certain standards, I will lower the stakes and allow myself to make and learn at my own pace. Though I am doing this for nobody but myself, I am making this public to hold myself accountable. What will my sketches look like when I can do (almost) whatever I want? Where will my curiosity lead me? I hope when this practice inevitably ends, that what I have to show for it with my documentation and the work itself will be insightful, helpful, and maybe fun to look and and interact with too.
 
-
 Design and Documentation Constraints:
 
 - 800px by 600px canvas. don't change the canvas size.
@@ -25,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  17 / sláinte
-START: 2026.02.28 20:27
-END: 2026.02.28 20:59
+DAY  18 / mí an mhárta
+START: 2026.03.01 17:12
+END: 2026.03.01 17:38
 
 google search:
 - 
@@ -36,18 +35,12 @@ chatgpt prompt:
 - 
 
 p5js ref search:
-- rotateX
+- 
 
 errors (not exhaustive):
 - 
 
 summary:
-- tried WEB GL but then the word went away and 
-I don't know why. I rotated the canvas successfull though
-and that was cool.
-- I started an effort to make the word in the for loop
-start from one color and end at another, but wasn't
-successful. If I make the step small enough (~.1)
-I can see it load and transform, but then the color ends up
-being white because it's the highest value for rgb. anything 
-larger than 255 is white. still cool though.
+- fun! I know there is a more elegant way to accomplish this, but I did what I know. 
+- it's difficult to describe the code. but it's important to me so I spend time practicing.
+even if it's not great, it's better than nothing.
