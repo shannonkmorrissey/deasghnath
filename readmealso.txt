@@ -25,9 +25,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  16 / dúch
-START: 2026.02.26 23:18
-END: 2026.02.26 00:02
+DAY  17 / sláinte
+START: 2026.02.28 20:27
+END: 2026.02.28 20:59
 
 google search:
 - 
@@ -36,12 +36,18 @@ chatgpt prompt:
 - 
 
 p5js ref search:
-- string
-- variables
+- rotateX
 
 errors (not exhaustive):
-- Uncaught (in promise) Error: Invalid color string
+- 
 
 summary:
-- really tired today, kind of feeling like I'm doing the same thing over 
-and over again. i want to dedicate more time to this. a half an hour is not enough.
+- tried WEB GL but then the word went away and 
+I don't know why. I rotated the canvas successfull though
+and that was cool.
+- I started an effort to make the word in the for loop
+start from one color and end at another, but wasn't
+successful. If I make the step small enough (~.1)
+I can see it load and transform, but then the color ends up
+being white because it's the highest value for rgb. anything 
+larger than 255 is white. still cool though.
