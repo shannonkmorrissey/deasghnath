@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  18 / mí an mhárta
-START: 2026.03.01 17:12
-END: 2026.03.01 17:38
+DAY  19 / laethúil
+START: 2026.03.02 22:22
+END: 2026.03.02 22:57
 
 google search:
 - 
@@ -41,6 +41,4 @@ errors (not exhaustive):
 - 
 
 summary:
-- fun! I know there is a more elegant way to accomplish this, but I did what I know. 
-- it's difficult to describe the code. but it's important to me so I spend time practicing.
-even if it's not great, it's better than nothing.
+- just doing random things today, playing with numbers. trying to see relationships.

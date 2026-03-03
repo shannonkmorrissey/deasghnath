@@ -2,51 +2,40 @@ let font;
 
 async function setup() {
     //noLoop();
+    background(150);
     createCanvas(800, 600);
-    describe(' the word "deasghnáth" in black filled text with a dark grey stroke on a light\
-        grey background. each of the letters of the word change size as you move your mouse\
-        on the canvas. black text above the word denotes mouse x position. black text below the word\
-        denotes mouse y position.\
+    describe(' the letters of the word "deasghnáth" in white outline on a \
+        black background. the letters grow larger and move closer together \
+        across the canvas to the right as you move your mouse down the canvas. \
     ');
     font = await loadFont('assets/fonts/Amarante-Regular.ttf');
 }
 
 function draw() {
-    background(150);
+    background(15);
     textFont(font);
-    fill(0);
+    noFill();
     stroke(100);
-    strokeWeight(10);
+    strokeWeight(1);
     textAlign(CENTER, CENTER);
-
-    for (let wordSize = 30; wordSize <80; wordSize++) {
-        textSize(wordSize+mouseX/2);
-        text('d', 100, height/2);
-        textSize(wordSize+mouseY/2);
-        text('e', 150, height/2);
-        textSize(wordSize+mouseX/2);
-        text('a', 200, height/2);
-        textSize(wordSize+mouseY/2);
-        text('s', 250, height/2);
-        textSize(wordSize+mouseX/2);
-        text('g', 300, height/2);
-        textSize(wordSize+mouseY/2);
-        text('h', 350, height/2);
-        textSize(wordSize+mouseX/2);
-        text('n', 400, height/2);
-        textSize(wordSize+mouseY/2);
-        text('á', 450, height/2);
-        textSize(wordSize+mouseX/2);
-        text('t', 500, height/2);
-        textSize(wordSize+mouseY/2);
-        text('h', 550, height/2);
-    }
-
-    // mouse x coordinate appears in the center above the word "deasghnáth" and 
-    // mouse y coordinate appears in the center below the word "deasghnáth"
-    textSize(20);
-    fill(0);
-    noStroke();
-    text(`${mouseX}`, width/2, height/2-150);
-    text(`${mouseY}`, width/2, height/2+150)
+    textSize(40+mouseY/3);
+    text('D', mouseY+30, height/2);
+    textSize(40+mouseY/3);
+    text('E', mouseY+50, height/2);
+    textSize(40+mouseY/3);
+    text('A', mouseY+70, height/2);
+    textSize(40+mouseY/3);
+    text('S', mouseY+90, height/2);
+    textSize(40+mouseY/3);
+    text('G', mouseY+110, height/2);
+    textSize(40+mouseY/3);
+    text('H', mouseY+130, height/2);
+    textSize(40+mouseY/3);
+    text('N', mouseY+150, height/2);
+    textSize(40+mouseY/3);
+    text('Á', mouseY+170, height/2);
+    textSize(40+mouseY/3);
+    text('T', mouseY+190, height/2);
+    textSize(40+mouseY/3);
+    text('H', mouseY+210, height/2);
 }
