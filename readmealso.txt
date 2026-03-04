@@ -24,12 +24,12 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  19 / laethúil
-START: 2026.03.02 22:22
-END: 2026.03.02 22:57
+DAY  20 / cnámh
+START: 2026.03.03 23:20
+END: 2026.03.03 23:49
 
 google search:
-- 
+- how to cycle through an array p5js
 
 chatgpt prompt:
 - 
@@ -38,7 +38,17 @@ p5js ref search:
 - 
 
 errors (not exhaustive):
-- 
+- Uncaught (in promise) TypeError: mouseX is not a function
 
 summary:
-- just doing random things today, playing with numbers. trying to see relationships.
+- i looped throug the word in an array and it worked!!!!! code working is endlessly 
+exhilirating. pure dopamine reward. something that was 20 lines of code 
+before is now 5.
+- everything seems so technical and intimidating but i want to prove to myself
+that i can do it. i've already come further than i ever thought.
+- i have the urge or pressure (from somewhere) to change a lot each day.
+like every new sketch has to be something completely different and 
+amazing in a new way.
+- it's so satisfying to leave background in setup and watch the patterns
+that can happen when you move your mouse around the canvas
+- im infatuated with geometric shapes !
