@@ -24,12 +24,12 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  20 / cnámh
-START: 2026.03.03 23:20
-END: 2026.03.03 23:49
+DAY  21 / imníoch
+START: 2026.03.04 22:49
+END: 2026.03.04 23:30
 
 google search:
-- how to cycle through an array p5js
+- 
 
 chatgpt prompt:
 - 
@@ -38,17 +38,16 @@ p5js ref search:
 - 
 
 errors (not exhaustive):
-- Uncaught (in promise) TypeError: mouseX is not a function
+- 
 
 summary:
-- i looped throug the word in an array and it worked!!!!! code working is endlessly 
-exhilirating. pure dopamine reward. something that was 20 lines of code 
-before is now 5.
-- everything seems so technical and intimidating but i want to prove to myself
-that i can do it. i've already come further than i ever thought.
-- i have the urge or pressure (from somewhere) to change a lot each day.
-like every new sketch has to be something completely different and 
-amazing in a new way.
-- it's so satisfying to leave background in setup and watch the patterns
-that can happen when you move your mouse around the canvas
-- im infatuated with geometric shapes !
+- just tweaked values today. I could easily do this for hours, the
+combinations are endless! I love changing, seeing what happens,
+enjoying it, interacting, and changing again on repeat. I usually only
+screen record clips I think are somewhat resolved, but today I 
+accidentally left it recording for 18 minutes, and I realized seeing 
+this change>see>test loop playout visually is actually the crux of 
+this practice. I don't think I can record for the whole session every time
+because this video is almost half a gig, and I don't have the space for that.
+But maybe I could? Maybe if I speed it up to like 5x speed the file
+size will be smaller. I'll have to see how that looks though.
