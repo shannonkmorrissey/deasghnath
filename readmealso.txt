@@ -24,30 +24,24 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  21 / imníoch
-START: 2026.03.04 22:49
-END: 2026.03.04 23:30
+DAY  22 / buachaill
+START: 2026.03.05 23:00
+END: 2026.03.05 23:28
 
 google search:
-- 
+- rgba color
+- rgba color p5js
 
 chatgpt prompt:
 - 
 
 p5js ref search:
-- 
+- textAscent()
 
 errors (not exhaustive):
 - 
 
 summary:
-- just tweaked values today. I could easily do this for hours, the
-combinations are endless! I love changing, seeing what happens,
-enjoying it, interacting, and changing again on repeat. I usually only
-screen record clips I think are somewhat resolved, but today I 
-accidentally left it recording for 18 minutes, and I realized seeing 
-this change>see>test loop playout visually is actually the crux of 
-this practice. I don't think I can record for the whole session every time
-because this video is almost half a gig, and I don't have the space for that.
-But maybe I could? Maybe if I speed it up to like 5x speed the file
-size will be smaller. I'll have to see how that looks though.
+- I did not end up in a cool place today, but that's okay. I was trying to figure out what to do with
+textAscent(), and it took the whole 28 minutes to end up with this. What I have in mind is 
+some kind of series of lines related to changing text size. I'll see how it goes tomorrow.

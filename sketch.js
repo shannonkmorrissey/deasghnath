@@ -12,23 +12,32 @@ async function setup() {
         in a small cyclic pattern. \
     ');
     font = await loadFont('assets/fonts/Amarante-Regular.ttf');
+
+    let baseY = 200;
+    strokeWeight(1);
+    textSize(24);
+    text('deasghnáth', 0, baseY);
+    let a = textAscent();
+    line(0, baseY, 200, baseY);
+    line(23, baseY - a, 200, baseY);
 }
+
 
 function draw() {
     //background(15, 0, 200);
     textFont(font);
-    fill(150, 0, 50, 30);
+    //fill(150, 0, 50, 30);
     //noStroke();
-    stroke(50, 25, 100, 20);
-    strokeWeight(2);
+    noFill();
+    stroke(50, 25, 100, 1.6);
+    strokeWeight(5);
+    strokeCap(SQUARE);
     textAlign(CENTER, CENTER);
 
     for (let i = 0; i < ritual.length; i++) {
-        let xPos = width/2 +(i*sin(millis()/1000));
-        let yPos = height/2 +(i*cos(millis()/1000));
-        textSize(900);
+        let xPos = i*width/15+140;
+        let yPos = (i/7)*height/2.5+110;
+        textSize(100);
         text(ritual[i], xPos, yPos);
-        print(xPos, yPos);
-        print(i);
     }
 }
