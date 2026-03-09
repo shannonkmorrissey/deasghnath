@@ -24,24 +24,21 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  22 / buachaill
-START: 2026.03.05 23:00
-END: 2026.03.05 23:28
+DAY  23 / réalta
+START: 2026.03.08 22:09
+END: 2026.03.08 
 
 google search:
-- rgba color
-- rgba color p5js
+- 
 
 chatgpt prompt:
 - 
 
 p5js ref search:
-- textAscent()
+- cylinder()
 
 errors (not exhaustive):
 - 
 
 summary:
-- I did not end up in a cool place today, but that's okay. I was trying to figure out what to do with
-textAscent(), and it took the whole 28 minutes to end up with this. What I have in mind is 
-some kind of series of lines related to changing text size. I'll see how it goes tomorrow.
+- 
