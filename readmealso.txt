@@ -26,7 +26,7 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 DAY  23 / réalta
 START: 2026.03.08 22:09
-END: 2026.03.08 
+END: 2026.03.08 22:31
 
 google search:
 - 
