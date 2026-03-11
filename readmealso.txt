@@ -24,21 +24,23 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  23 / réalta
-START: 2026.03.08 22:09
-END: 2026.03.08 22:31
+DAY  24 / faisnéis
+START: 2026.03.10 23:10
+END: 2026.03.10 23:30
 
 google search:
-- 
+- can you make text 3d in p5js
 
 chatgpt prompt:
 - 
 
 p5js ref search:
-- cylinder()
+- textToModel()
+- p5 Geometry clearColors()
+- p5 Geometry normalize()
 
 errors (not exhaustive):
-- 
+- Uncaught SyntaxError: missing ) after argument list (at sketch.js:15:46)
 
 summary:
-- 
+- orbit control!!!!!!! extruded text!!!!! 
