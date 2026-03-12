@@ -24,23 +24,24 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  24 / faisnéis
-START: 2026.03.10 23:10
-END: 2026.03.10 23:30
+DAY  25 / gearmánach
+START: 2026.03.11 23:45
+END: 2026.03.12
 
 google search:
-- can you make text 3d in p5js
+- 
 
 chatgpt prompt:
 - 
 
 p5js ref search:
-- textToModel()
-- p5 Geometry clearColors()
-- p5 Geometry normalize()
+- 
 
 errors (not exhaustive):
-- Uncaught SyntaxError: missing ) after argument list (at sketch.js:15:46)
+- 
 
 summary:
-- orbit control!!!!!!! extruded text!!!!! 
+- discovered that I don't have to make many geoms,
+I can just make one and recall it many times! this orbit
+control is too fun, and I'm discovering I looove 
+playing with transparency.
