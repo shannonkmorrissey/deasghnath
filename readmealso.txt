@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  25 / gearmánach
-START: 2026.03.11 23:45
-END: 2026.03.12
+DAY  26 / ríomhaire
+START: 2026.03.12 22:44
+END: 2026.03.12 23:14
 
 google search:
 - 
@@ -41,7 +41,8 @@ errors (not exhaustive):
 - 
 
 summary:
-- discovered that I don't have to make many geoms,
-I can just make one and recall it many times! this orbit
-control is too fun, and I'm discovering I looove 
-playing with transparency.
+- I'm always surprised by how much can change visually with just playing 
+around with like 3 different parameters. it's like half the work of 
+computational design is building the script and the other half is playing around
+and it's so fun... maybe halves isn't the right breakdown but something
+like that.
