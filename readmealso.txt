@@ -24,15 +24,15 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  26 / ríomhaire
-START: 2026.03.12 22:44
-END: 2026.03.12 23:14
+DAY  27 / teaghlach
+START: 2026.03.15 17:45
+END: 2026.03.15 18:24
 
 google search:
 - 
 
 chatgpt prompt:
-- 
+- how could I incrementally rotate the x-axis of the canvas of a p5js sketch every half a second?
 
 p5js ref search:
 - 
@@ -41,8 +41,7 @@ errors (not exhaustive):
 - 
 
 summary:
-- I'm always surprised by how much can change visually with just playing 
-around with like 3 different parameters. it's like half the work of 
-computational design is building the script and the other half is playing around
-and it's so fun... maybe halves isn't the right breakdown but something
-like that.
+- learned how to make an animation independent of mouse interaction
+- once again I really love the no fill, slightly transparent stroke. it brings out
+the architectural qualitites of the letterforms
+- 
