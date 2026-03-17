@@ -24,24 +24,28 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  27 / teaghlach
-START: 2026.03.15 17:45
-END: 2026.03.15 18:24
+DAY  28 / uisce
+START: 2026.03.16 22:14
+END: 2026.03.16 22:59
 
 google search:
-- 
+- expression to check if a number is even or odd
 
 chatgpt prompt:
-- how could I incrementally rotate the x-axis of the canvas of a p5js sketch every half a second?
+-
 
 p5js ref search:
 - 
 
 errors (not exhaustive):
-- 
+- Uncaught SyntaxError: Unexpected token 'else' (at sketch.js:43:9)
 
 summary:
-- learned how to make an animation independent of mouse interaction
-- once again I really love the no fill, slightly transparent stroke. it brings out
-the architectural qualitites of the letterforms
-- 
+- tried complicating it a bit further and used some knowledge from the 
+khan academy course I'm doing right now (AP CS Principles), like modulus).
+- to me, designing with code is fun because of the unexpected happy accidents.
+- it makes more sense in my brain to play and have fun, and then fine tune from there,
+than to set out with a specific goal in mind, and be frustrated at trying to figure out 
+how to get there with code. what your brain envisions probably can be visualized
+with code to some extent, but i feel like that's against the point of designing with code. you 
+experiment and then refine. test and respond. like cybernetics.
