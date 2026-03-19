@@ -24,28 +24,30 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  28 / uisce
-START: 2026.03.16 22:14
-END: 2026.03.16 22:59
+DAY  29 / fuar
+START: 2026.03.18 22:54
+END: 2026.03.18 23:38
 
 google search:
-- expression to check if a number is even or odd
+- how to export a png of canvas p5js
+- how to make a save canvas as png button p5js hmtl
+- how to return current time p5js
+- how to make put leading zeros in month() p5js
 
 chatgpt prompt:
--
+- write the describe() text for this p5js sketch
 
 p5js ref search:
-- 
+- save()
 
 errors (not exhaustive):
-- Uncaught SyntaxError: Unexpected token 'else' (at sketch.js:43:9)
+- Uncaught ReferenceError: png is not defined
+- Uncaught SyntaxError: missing ) after argument list (at sketch.js:69:31)Understand this error
+index.html:13 Uncaught ReferenceError: screenshot is not defined
+    at HTMLButtonElement.onclick (index.html:13:36)
 
 summary:
-- tried complicating it a bit further and used some knowledge from the 
-khan academy course I'm doing right now (AP CS Principles), like modulus).
-- to me, designing with code is fun because of the unexpected happy accidents.
-- it makes more sense in my brain to play and have fun, and then fine tune from there,
-than to set out with a specific goal in mind, and be frustrated at trying to figure out 
-how to get there with code. what your brain envisions probably can be visualized
-with code to some extent, but i feel like that's against the point of designing with code. you 
-experiment and then refine. test and respond. like cybernetics.
+- spent most of my time making a lil screenshot button
+- i want to figure out how to make the date format have leading zeros so file sorting is easier
+(right now the month is returning as just 3, not 03)
+- im proud of myself
