@@ -24,30 +24,24 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  29 / fuar
-START: 2026.03.18 22:54
-END: 2026.03.18 23:38
+DAY  30 / máthair
+START: 2026.03.19 23:42
+END: 2026.03.20 00:18
 
 google search:
-- how to export a png of canvas p5js
-- how to make a save canvas as png button p5js hmtl
-- how to return current time p5js
-- how to make put leading zeros in month() p5js
+- 
 
 chatgpt prompt:
-- write the describe() text for this p5js sketch
+- 
 
 p5js ref search:
-- save()
+- 
 
 errors (not exhaustive):
-- Uncaught ReferenceError: png is not defined
-- Uncaught SyntaxError: missing ) after argument list (at sketch.js:69:31)Understand this error
-index.html:13 Uncaught ReferenceError: screenshot is not defined
-    at HTMLButtonElement.onclick (index.html:13:36)
+- 
 
 summary:
-- spent most of my time making a lil screenshot button
-- i want to figure out how to make the date format have leading zeros so file sorting is easier
-(right now the month is returning as just 3, not 03)
-- im proud of myself
+- wanted to try out making other elements in the sketch apart from just type
+- a fun moment was remembering I set the whole canvas to rotate so when I made the 
+grid/squares, the grid rotates too. I'm obsessed with leaving trails of the sketch on the canvas as
+it goes through steps. almost like stamping.
