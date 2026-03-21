@@ -1,3 +1,4 @@
+let running = true;
 let font1;
 let font2;
 let canvasAngle = 0;
@@ -5,12 +6,11 @@ let lastStep = 0;
 let stepInterval = 100; // higher = slower rotation
 
 async function setup() {
-    //noLoop();
     createCanvas(800, 600, WEBGL);
     
     background(200);
 
-    describe(' \
+    describe('\
     ');
 
     font1 = await loadFont('assets/fonts/NovaCut-Regular.ttf');
@@ -80,7 +80,19 @@ function draw() {
 
 }
 
-//saves canvas
+//saves canvas as a screenshot when button pressed
 function screenshot() {
     saveCanvas('deasghnáth' + '_' + year() + month() + day() + hour() +  minute() + second(), 'png');
+}
+
+//starts and stops the sketch when button pressed
+function startStop() {
+    if (running) {
+        noLoop();
+        running = false;
+    }
+    else {
+        loop();
+        running = true;
+    }
 }

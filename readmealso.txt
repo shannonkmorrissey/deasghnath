@@ -24,15 +24,19 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  30 / máthair
-START: 2026.03.19 23:42
-END: 2026.03.20 00:18
+DAY  32 / earrach
+START: 2026.03.20 21:52
+END: 2026.03.20 22:23
 
 google search:
-- 
+- how to stop sketch from running in vs code live preview after every time you edit the code
+- how to stop sketch from running in vs code live preview after every time you edit the code autosave
+- can you make a button in p5js to save the js file
+- can you make a button in javascript to save the p5.js file of a webpage
 
 chatgpt prompt:
-- 
+- can you make a button in javascript to save the p5.js file of a webpage
+- i am using live preview on vs code to view my p5js sketch. i want to create a button on the webpage that saves the sketch and reloads the page.
 
 p5js ref search:
 - 
@@ -41,7 +45,26 @@ errors (not exhaustive):
 - 
 
 summary:
-- wanted to try out making other elements in the sketch apart from just type
-- a fun moment was remembering I set the whole canvas to rotate so when I made the 
-grid/squares, the grid rotates too. I'm obsessed with leaving trails of the sketch on the canvas as
-it goes through steps. almost like stamping.
+- i don't think i even edited one line of code. I got distracted wanting to 
+make the sketch stop auto-saving and reloading every time I typed even
+just one character. i figured out in vscode the autosave feature was enabled to
+save after every 100ms. I made it every 10 minutes. I can manually save if i want to 
+save and reload more than that. and i added a start/stop button so the constant
+motion doesn't distract me. one thing that i want to figure out though is that if
+i make changes while it's stopped, and then press start, it won't reflect the 
+new changes because it hasn't saved yet (assuming it didn't autosave). so im wondering
+how i could make the button save and then reload...
+
+ok i just googled it and apparently not?
+
+refresh button doesn't work bc just refreshes. it needs to be re-saved.
+
+programming concepts (I just want a place to collect what I know/help build my vocabular):
+- variables
+- math expressions
+- strings
+- conditionals
+- logical equivalence
+- functions
+- loops
+- lists
