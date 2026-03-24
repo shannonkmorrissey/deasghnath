@@ -24,34 +24,38 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  32 (was a typo before, this is the correct number now) / sos a thógáil
-START: 2026.03.22 18:40
-END: 2026.03.22 19:34
+DAY  33 / pian
+START: 2026.03.23 22:24
+END: 2026.03.23 23:54
 
 google search:
-- 
+- elif p5js
+- greater than or equal to js syntax
+- js conditional operations syntax
+- js boolean operator syntax
+- js while loop
+- js or operator
 
 chatgpt prompt:
-- 
+- in this p5js code snippet, why does the scale(scaleSize) only appear to change visually on the canvas when placed before the for loop? 
 
 p5js ref search:
-- 
+- scale()
 
 errors (not exhaustive):
-- Uncaught SyntaxError: Unexpected number (at sketch.js:2:17)
-- Uncaught SyntaxError: Unexpected end of input (at sketch.js:81:2)
-- Uncaught (in promise) TypeError: scale is not a function
-- Uncaught SyntaxError: Unexpected identifier 'scaleSize' (at sketch.js:66:12)
+- Uncaught SyntaxError: Unexpected token '{' (at sketch.js:67:31)
+- Uncaught SyntaxError: Unexpected token ';' (at sketch.js:57:33)
 
 summary:
-- played around with incrementation operations with scale and color. i also
-realized that you can't read the word at all, but that doesn't bother me. 
-it doesn't need to be legible, the word just needs to be in the sketch. so I don't feel like I'm
-"doing it wrong." 
-- i still have working code today, but I got to a point where it breaks 
-if I try to make the scale go back up after reaching 0 from going down. but i 
-saw that the scale only ever increases and tops out at 1.9. don't know why. confusing.
-i will pick that back up next time.
+- went through a bunch of flawed logic trying to get scaleSize to increase until it reached 6 and then decrease
+once it reached 0. watched a coding train video and solved it within 3 minutes...lol. some days i think I'm too dumb
+to do this, but I like it so much that I want to keep going even if I feel stupid. I really want to understand.
+- if you want it to go backwards where it was once forward, make a variable and make the variable
+positive and then make it negative when you want it to go backward.
+- i just spent like 30 minutes trying to figure out why i have to put scale(scaleSize) before the for loop
+and after asking chatgpt and then looking up scale() in the ref, there is a note that says
+transformations reset at the beginning of the draw loop. should have gone straight to the ref!!!!
+
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables

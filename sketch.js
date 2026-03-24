@@ -7,29 +7,31 @@ let r = 0;
 let g = 255;
 let b = 0;
 let scaleSize = 1;
+let scaleCounter = 0.1;
 
 async function setup() {
     createCanvas(800, 600, WEBGL);
     
-    background(200);
+    //background(200);
 
-    describe('\
+    describe('a cluster of the word "deasghnáth rotating along different\
+        axes in space and zooming in and out in a loop.\
     ');
 
     font1 = await loadFont('assets/fonts/NovaCut-Regular.ttf');
     font2 = await loadFont('assets/fonts/SpaceGrotesk-SemiBold.ttf');
 
     geom1 = font1.textToModel("deasghnáth", 0, 0, {
-        sampleFactor: 5, extrude: 10});
+        sampleFactor: 2, extrude: 15});
     geom1.normalize();
     geom2 = font2.textToModel("deasghnáth", 0, 0, {
-        sampleFactor: 5, extrude: 10});
+        sampleFactor: 2, extrude: 10});
     geom2.normalize();
 
 }
 
 function draw() {
-    //background(100);
+    background(100);
     textAlign(CENTER, CENTER);
 
     //updates angle I want to move the canvas according to time elapsed
@@ -44,33 +46,47 @@ function draw() {
     rotateY(canvasAngle);
 
     textFont(font1);
-    fill(r);
-    stroke(r, 0, b, 50);
-    scale(scaleSize);
+    stroke(0);
+    fill(r, 50, b, 50);
+    strokeWeight(1);
+    scale(scaleSize); // why does this have to be before the for loop in order for it to visually appear to change size?
+    //because transformations like scale reset at the beginning of the draw loop. 
 
-    for (let wordAngle = 0; wordAngle < 1; wordAngle += 0.1) {
+    for (let wordAngle = 0; wordAngle < 2; wordAngle += 0.6) {
         model(geom1);
         rotateX(wordAngle);
         r++;
         g -= 20;
         b += 10;
-        scaleSize += 0.001;
 
         if (r > 255) {
             r = 0;
             g = 255;
             b = 0;
         }
-
-        if (scaleSize > 2) {
-            scaleSize -= 0.001;
-        }
-
-        //CODE BREAKS HERE AND I DON'T KNOW WHY
-        // if (scaleSize = 0) {
-        //     scaleSize += 0.001;
-        // }
     }
+
+    // this was a failure
+    // i want scaleSize to increase until it reaches 2 and then
+    //decrease until it reaches 0, over again
+    // if (scaleSize === 1) {//enter conditional
+    //     scaleSize += 0.001; // increment
+    //     if (scaleSize === 2) {
+    //         scaleSize -= 0.0001;
+    //         while (scaleSize > 0 && scaleSize < 2) {
+    //             scaleSize -= 0.001;
+    //         }
+    //     }
+    // }
+    //scaleSize === 1
+
+    if (scaleSize > 6) {
+        scaleCounter = -0.1;
+    } else if (scaleSize < 0) {
+        scaleCounter = 0.1;
+    }
+
+    scaleSize += scaleCounter;
 }
 
 // BUTTONS 
