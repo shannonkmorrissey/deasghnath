@@ -1,0 +1,60 @@
+p5.js reference sheet
+
+*COORDINATE SYSTEMS*
+2D default
+3D --> WEBGL as third argument in createCanvas
+
+
+*SHAPES*
+rect()
+ellipse()
+line()
+point()
+beginShape() --> endShape(CLOSE) with vertex() inside
+
+
+*TYPOGRAPHY*
+text()
+loadFont()
+textFont()
+textSize()
+textAlign()
+
+
+*COLOR*
+background()
+fil()
+stroke()
+^contain 1-4 arguments: (gray), ('# six digit hex'), ('css color string'), (gray, alpha), (red, green, blue), or (red, green, blue, alpha)
+colorMode() <-- HSL, HSB, RGB
+colorVariable = color(rValue, gValue, bValue)
+
+
+*TRANSFORMATIONS*
+push() --> pop() to set styles for only what's inside (pop restores what it was before)
+translate(xDisplace, yDisplace)
+scale(xFactor, yFactor)
+rotate(angle) <-- default is radians
+angleMode(DEGREES) 
+
+
+*SYSTEM VARIABLES*
+windowWidth, windowHeight
+width/height <-- of canvas
+frameCount
+mouseX, mouseY
+key
+keyCode
+
+
+*SYSTEM EVENTS*
+function keyPressed()
+function mouseMoved()
+function mousePressed()
+
+
+*MATH*
+
+
+
+

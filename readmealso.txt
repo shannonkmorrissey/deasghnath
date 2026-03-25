@@ -24,37 +24,34 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  33 / pian
-START: 2026.03.23 22:24
-END: 2026.03.23 23:54
+DAY  34 / maolaigh
+START: 2026.03.24 20:31
+END: 2026.03.24 21:55
 
 google search:
-- elif p5js
-- greater than or equal to js syntax
-- js conditional operations syntax
-- js boolean operator syntax
-- js while loop
-- js or operator
+- can you do a for each loop in p5js
+- alpha channel range rgb color p5js
 
 chatgpt prompt:
-- in this p5js code snippet, why does the scale(scaleSize) only appear to change visually on the canvas when placed before the for loop? 
+- 
 
 p5js ref search:
-- scale()
+- textToPoints()
+- translate()
+- textAlign()
 
 errors (not exhaustive):
-- Uncaught SyntaxError: Unexpected token '{' (at sketch.js:67:31)
-- Uncaught SyntaxError: Unexpected token ';' (at sketch.js:57:33)
+- Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
+- Uncaught SyntaxError: Unexpected identifier 'point' (at sketch.js:20:9)
+- sketch.js:21 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'x')
+- Uncaught SyntaxError: Unexpected token ';' (at sketch.js:18:26)
+- Uncaught SyntaxError: Unexpected identifier 'simplifyThreshold' (at sketch.js:18:29)
+- Uncaught SyntaxError: missing ) after argument list (at sketch.js:19:25)
 
 summary:
-- went through a bunch of flawed logic trying to get scaleSize to increase until it reached 6 and then decrease
-once it reached 0. watched a coding train video and solved it within 3 minutes...lol. some days i think I'm too dumb
-to do this, but I like it so much that I want to keep going even if I feel stupid. I really want to understand.
-- if you want it to go backwards where it was once forward, make a variable and make the variable
-positive and then make it negative when you want it to go backward.
-- i just spent like 30 minutes trying to figure out why i have to put scale(scaleSize) before the for loop
-and after asking chatgpt and then looking up scale() in the ref, there is a note that says
-transformations reset at the beginning of the draw loop. should have gone straight to the ref!!!!
+- big win today: figuring out how to do a for each loop in p5. i knew how to do it in python, but the syntax is slightly different
+- i don't even care about limiting myself to 30 minutes (i guess at least while I'm on spring break)
+because i just don't want to stop!
 
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
