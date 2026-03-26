@@ -1,12 +1,13 @@
 let running = true; // DO NOT DELETE
 let font;
-let fontSize = 100;
+let fontSize = 160;
 let xWaveValue, yWaveValue;
-let ang = 0;
+let wordAng = 0;
+let lineAng = 0;
 
 async function setup() {
     createCanvas(800, 600);
-
+    background(0)
     describe('\
     ');
     
@@ -19,27 +20,59 @@ async function setup() {
     strokeWeight(0.2);
 
     // get the points array
-    points = font.textToPoints('DEASGHNÁTH', width/2, height/2,
+    points = font.textToPoints('Deasghnáth', width/2, height/2,
     { sampleFactor: 0.3 }
     );
 }
 
 function draw() {
-    background(225);
+    // draw specific variables
+    let xLineJoint = width/2 + 300*sin(lineAng);
+    let yLineJoint = height/2 + 300*sin(lineAng);
+    lineAng += 0.1;
+
+    //background(225);
     // initialize variables for movement
-    xWaveValue = 20*sin(ang);
-    yWaveValue = 20*cos(ang);
-    ang += 0.05;
+    xWaveValue = 20*cos(wordAng);
+    yWaveValue = 20*tan(wordAng);
+    wordAng += 0.001;
 
-    // draw a circle at each point
+    push();
+    stroke(100, 100, 200);
+    strokeWeight(0.5);
+    fill(200, 30, 180, 10);
+
+    //draw a square at each point, and have it move according to sin/cos
     for (let p of points) {
-        circle(p.x + xWaveValue, p.y + yWaveValue, 15);
+        square(p.x + xWaveValue, p.y + yWaveValue, 25);
     }
+    pop();
 
+    push();
+    stroke(200);
+    // draw a square at each point
     for (let p of points) {
-        circle(p.x, p.y, 15);
+        rect(p.x, p.y, 40, 10);
     }
+    pop();
 
+    // draw lines
+    push();
+    if (mouseX > width/2) {
+        stroke(0, 20);
+    } else {
+        stroke(255, 20);
+    }
+    strokeWeight(1);
+    line(0, 0, xLineJoint, yLineJoint);
+    line(width/2, 0, xLineJoint, yLineJoint);
+    line(0, height/2, xLineJoint, yLineJoint);
+    line(width, 0, xLineJoint, yLineJoint);
+    line(width, height/2, xLineJoint, yLineJoint);
+    line(width, height, xLineJoint, yLineJoint);
+    line(width/2, height, xLineJoint, yLineJoint);
+    line(0, height, xLineJoint, yLineJoint);
+    pop();
 }
 
 // BUTTONS 
