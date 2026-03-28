@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  35 / míáú
-START: 2026.03.25 23:01
-END: 2026.03.25 23:45
+DAY  36 / reiligiún
+START: 2026.03.27 23:27
+END: 2026.03.27 23:55
 
 google search:
 - 
@@ -35,16 +35,13 @@ chatgpt prompt:
 - 
 
 p5js ref search:
-- beginShape()
+- 
 
 errors (not exhaustive):
 - 
 
 summary:
-- I haven't been paying much attention to the background, so I did a bit more with that today
-- was pleasantly surprised by the result of using tan instead of sin or cosine
-- putting background in setup to see the trails literally never misses. i am so easy to please!
-
+- just played around with values today
 
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
