@@ -55,6 +55,6 @@ function mousePressed()
 
 *MATH*
 
-
+sin/cos/tan
 
 

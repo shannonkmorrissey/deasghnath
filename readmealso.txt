@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  36 / reiligiún
-START: 2026.03.27 23:27
-END: 2026.03.27 23:55
+DAY  37 / leigheas
+START: 2026.03.29 21:36
+END: 2026.03.29 22:06
 
 google search:
 - 
@@ -41,7 +41,9 @@ errors (not exhaustive):
 - 
 
 summary:
-- just played around with values today
+- I feel more confident knowing a lot of programming is learning one way to do something
+and that exposes you to methods of getting something done. there are always more than one way to do things,
+but sometimes you just need the door opened.
 
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):

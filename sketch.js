@@ -4,6 +4,8 @@ let fontSize = 160;
 let xWaveValue, yWaveValue;
 let wordAng = 0;
 let lineAng = 0;
+let r = 0;
+let rInc = 25; // increment for r value. higher = faster
 
 async function setup() {
     createCanvas(800, 600);
@@ -15,13 +17,11 @@ async function setup() {
     font = await loadFont('assets/fonts/UnifrakturMaguntia-Regular.ttf');
     textSize(fontSize);
     textAlign(CENTER);
-    stroke(0);
-    noFill();
-    strokeWeight(0.2);
+    strokeWeight(0.6);
 
     // get the points array
     points = font.textToPoints('Deasghnáth', width/2, height/2,
-    { sampleFactor: 0.3 }
+    { sampleFactor: 0.5 }
     );
 }
 
@@ -38,23 +38,33 @@ function draw() {
     wordAng += 0.1;
 
     push();
-    stroke(200);
-    strokeWeight(0.5);
-    fill(200, 60, 180);
+    stroke(0);
+    fill(r, 0, 0);
     //draw a square at each point, and have it move according to sin/cos
     for (let p of points) {
-        ellipse(p.x + xWaveValue, p.y + yWaveValue, 10, 80);
+        circle(p.x + xWaveValue, p.y + yWaveValue, 10);
     }
     pop();
 
     push();
     stroke(255);
+    noFill();
     // draw an ellipse at each point
     for (let p of points) {
-        ellipse(p.x + yWaveValue, p.y + xWaveValue, 10, 80);
+        circle(p.x + yWaveValue, p.y + xWaveValue, 10);
     }
     pop();
 
+    // oscillating r value
+    if (r > 255) {
+        rInc = -25;
+    }
+    if (r < 0) {
+        rInc = 25;
+    }
+
+    // increase r value
+    r += rInc;
 }
 
 // BUTTONS 
