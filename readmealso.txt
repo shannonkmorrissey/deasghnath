@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  37 / leigheas
-START: 2026.03.29 21:36
-END: 2026.03.29 22:06
+DAY  38 / fuaim
+START: 2026.03.31 21:03
+END: 2026.03.31 22:49
 
 google search:
 - 
@@ -41,10 +41,7 @@ errors (not exhaustive):
 - 
 
 summary:
-- I feel more confident knowing a lot of programming is learning one way to do something
-and that exposes you to methods of getting something done. there are always more than one way to do things,
-but sometimes you just need the door opened.
-
+- practiced in p5live today getting ready for next week's algorave. i tried coding from scratch with audio reactive elements, and I was happy with how much I remembered on the spot, but I also am not scared because the reference is built into p5live (thanks ted). There are some things that I am grateful that i'm testing out now, because they are a bit different in p5live from just p5 in vs code, like loading the font.
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables
