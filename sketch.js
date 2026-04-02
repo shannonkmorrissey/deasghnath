@@ -1,11 +1,11 @@
 let running = true; // DO NOT DELETE
 let font;
-let fontSize = 160;
+let fontSize = 200;
 let xWaveValue, yWaveValue;
 let wordAng = 0;
 let lineAng = 0;
 let r = 0;
-let rInc = 25; // increment for r value. higher = faster
+let rInc = 50; // increment for r value. higher = faster
 
 async function setup() {
     createCanvas(800, 600);
@@ -17,20 +17,15 @@ async function setup() {
     font = await loadFont('assets/fonts/UnifrakturMaguntia-Regular.ttf');
     textSize(fontSize);
     textAlign(CENTER);
-    strokeWeight(0.6);
+    strokeWeight(1);
 
     // get the points array
-    points = font.textToPoints('Deasghnáth', width/2, height/2,
+    points = font.textToPoints('deasghnáth', width/2, height/2,
     { sampleFactor: 0.5 }
     );
 }
 
 function draw() {
-    // draw specific variables
-    let xLineJoint = width/2 + 200*sin(lineAng);
-    let yLineJoint = height/2 + 200*sin(lineAng);
-    lineAng += 0.3;
-
     //background(225);
     // initialize variables for movement
     xWaveValue = 100*cos(wordAng);
@@ -39,10 +34,10 @@ function draw() {
 
     push();
     stroke(0);
-    fill(r, 0, 0);
+    fill(255, 0, 0);
     //draw a square at each point, and have it move according to sin/cos
     for (let p of points) {
-        circle(p.x + xWaveValue, p.y + yWaveValue, 10);
+        circle(p.x + xWaveValue, p.y + yWaveValue, 2);
     }
     pop();
 

@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  38 / fuaim
-START: 2026.03.31 21:03
-END: 2026.03.31 22:49
+DAY  39 / leithreas
+START: 2026.04.01 ~19:00
+END: 2026.04.01 ~21:00
 
 google search:
 - 
@@ -41,7 +41,11 @@ errors (not exhaustive):
 - 
 
 summary:
-- practiced in p5live today getting ready for next week's algorave. i tried coding from scratch with audio reactive elements, and I was happy with how much I remembered on the spot, but I also am not scared because the reference is built into p5live (thanks ted). There are some things that I am grateful that i'm testing out now, because they are a bit different in p5live from just p5 in vs code, like loading the font.
+- practiced with lele today after class in preparation for our set at the algorave next week
+it was interesting explaining concepts to another person. it's true that explaining 
+what is happening helps you understand the concepts deeper. I would trip up at times, and 
+not rememeber what snippet does what and why, so I think it was good practice 
+to review code that I've written and re-understand what is happening. 
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables
