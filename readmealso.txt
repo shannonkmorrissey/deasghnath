@@ -24,15 +24,16 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  39 / leithreas
-START: 2026.04.01 ~19:00
-END: 2026.04.01 ~21:00
+DAY  40 / smacht
+START: 2026.04.02 22:41
+END: 2026.04.03 01:24
 
 google search:
 - 
 
 chatgpt prompt:
-- 
+- I had chatgpt heavily help walk me through setting up the midi controller
+in p5js. i copied the code it wrote, but I also had it explain step by step what it was doing.
 
 p5js ref search:
 - 
@@ -41,11 +42,20 @@ errors (not exhaustive):
 - 
 
 summary:
-- practiced with lele today after class in preparation for our set at the algorave next week
-it was interesting explaining concepts to another person. it's true that explaining 
-what is happening helps you understand the concepts deeper. I would trip up at times, and 
-not rememeber what snippet does what and why, so I think it was good practice 
-to review code that I've written and re-understand what is happening. 
+- practiced for algorave. i sort of understand at a high level how the code
+for setting up the midi controller in p5 works. I don't want to get too bogged down
+in trying to understand every tiny detail. the code works. I can use the midi controller.
+it was an amazing moment when I turned the dial on the controller for the first
+sketch i set up and the circle i had made to change size actually changed. i yelped! it 
+was so exciting. then i went throught every single control on the apc 40 mkii to see what the 
+control ids were. and to observe how the status and values change. what each button's 
+options were. on/off, persistent vs. temporary (needing to be pressed continuously or not to stay on).
+i learned a lot today, by just doing. i also learned that if I allow myself to 
+just copy some code from chatgpt i get a lot farther than if i stifle myself by thinking i need to 
+learn everything there is to know about everything before letting myself just create.
+it gives me a tiny bit of heartburn to work in a program that i don't literally
+understand every single line of code on a granular level, but i understand enough, and I think 
+that's what matters. i just want to keep moving forward and not get myself stuck.
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables
