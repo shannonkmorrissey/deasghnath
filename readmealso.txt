@@ -24,38 +24,36 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  40 / smacht
-START: 2026.04.02 22:41
-END: 2026.04.03 01:24
+DAY  42 / obair
+START: 2026.04.06 22:25
+END: 2026.04.07 01:28
 
 google search:
 - 
 
 chatgpt prompt:
-- I had chatgpt heavily help walk me through setting up the midi controller
-in p5js. i copied the code it wrote, but I also had it explain step by step what it was doing.
+- 
+
+claude prompt:
+- i used claude this time because I remembered pedro said claude was better at coding (I think). 
+I used it to help explain to me how ted's p5live midi input was working. turns out it is actually so easy
+and I was going insane over nothing! jk but I always start out so confused.
+- I also had it explain how to access the values for certain controls only (not just the value
+currently being changed).
 
 p5js ref search:
-- 
+- box()
+- sphere()
+- text()
+- translate()
+- rotate()
 
 errors (not exhaustive):
-- 
+- i didn't even keep track there were so many. hundreds.
 
 summary:
-- practiced for algorave. i sort of understand at a high level how the code
-for setting up the midi controller in p5 works. I don't want to get too bogged down
-in trying to understand every tiny detail. the code works. I can use the midi controller.
-it was an amazing moment when I turned the dial on the controller for the first
-sketch i set up and the circle i had made to change size actually changed. i yelped! it 
-was so exciting. then i went throught every single control on the apc 40 mkii to see what the 
-control ids were. and to observe how the status and values change. what each button's 
-options were. on/off, persistent vs. temporary (needing to be pressed continuously or not to stay on).
-i learned a lot today, by just doing. i also learned that if I allow myself to 
-just copy some code from chatgpt i get a lot farther than if i stifle myself by thinking i need to 
-learn everything there is to know about everything before letting myself just create.
-it gives me a tiny bit of heartburn to work in a program that i don't literally
-understand every single line of code on a granular level, but i understand enough, and I think 
-that's what matters. i just want to keep moving forward and not get myself stuck.
+- practiced for algorave. after a lot of trial and error, I think I have moved forward another 1%.
+
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables
