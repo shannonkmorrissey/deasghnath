@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  42 / obair
-START: 2026.04.06 22:25
-END: 2026.04.07 01:28
+DAY  43 / spraoi
+START: 2026.04.07 21:45
+END: 2026.04.08 00:52
 
 google search:
 - 
@@ -35,24 +35,16 @@ chatgpt prompt:
 - 
 
 claude prompt:
-- i used claude this time because I remembered pedro said claude was better at coding (I think). 
-I used it to help explain to me how ted's p5live midi input was working. turns out it is actually so easy
-and I was going insane over nothing! jk but I always start out so confused.
-- I also had it explain how to access the values for certain controls only (not just the value
-currently being changed).
+- explain why the rotating box isn't leaving trails. i want the background to be slightly transparent in the draw function, so that slight trails are shown and then fade away. [inserted code]
 
 p5js ref search:
-- box()
-- sphere()
-- text()
-- translate()
-- rotate()
+- 
 
 errors (not exhaustive):
-- i didn't even keep track there were so many. hundreds.
+- i didn't even keep track there were so many. hundreds. again.
 
 summary:
-- practiced for algorave. after a lot of trial and error, I think I have moved forward another 1%.
+- practiced for algorave again. getting more familiar. it feels like a muscle i am practicing.
 
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
