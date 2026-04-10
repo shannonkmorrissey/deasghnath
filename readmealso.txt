@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  43 / spraoi
-START: 2026.04.07 21:45
-END: 2026.04.08 00:52
+DAY  44 / misneach
+START: 2026.04.09 21:08
+END: 2026.04.10 03:22
 
 google search:
 - 
@@ -35,16 +35,20 @@ chatgpt prompt:
 - 
 
 claude prompt:
-- explain why the rotating box isn't leaving trails. i want the background to be slightly transparent in the draw function, so that slight trails are shown and then fade away. [inserted code]
-
-p5js ref search:
 - 
 
+p5js ref search:
+- classes
+
 errors (not exhaustive):
-- i didn't even keep track there were so many. hundreds. again.
+- lots of this one: Uncaught (in promise) Error: Extension context invalidated.
+- Uncaught TypeError: Class constructor sphere cannot be invoked without 'new'
+- Uncaught (in promise) Error: Extension context invalidated.
 
 summary:
-- practiced for algorave again. getting more familiar. it feels like a muscle i am practicing.
+- prepared for algorave! i made so much progress tonight and I'm exhausted but also having the most fun.
+- I'm also stressed and worried I will suck and get a bunch of errors and have to give up! but i am also hopeful
+that it will be really fun and we'll just have a good time and everything will be okay.
 
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
