@@ -1,65 +1,49 @@
 let running = true; // DO NOT DELETE
-let font;
-let fontSize = 200;
-let xWaveValue, yWaveValue;
-let wordAng = 0;
-let lineAng = 0;
-let r = 0;
-let rInc = 50; // increment for r value. higher = faster
+let font, word1;
 
 async function setup() {
     createCanvas(800, 600);
-    background(255);
-    describe('\
-    ');
+    // background(150);
+    font = await loadFont('/assets/fonts/Amarante-Regular.ttf');
 
-    // load font and set text properties
-    font = await loadFont('assets/fonts/UnifrakturMaguntia-Regular.ttf');
-    textSize(fontSize);
-    textAlign(CENTER);
-    strokeWeight(1);
-
-    // get the points array
-    points = font.textToPoints('deasghnáth', width/2, height/2,
-    { sampleFactor: 0.5 }
-    );
 }
 
 function draw() {
-    //background(225);
-    // initialize variables for movement
-    xWaveValue = 100*cos(wordAng);
-    yWaveValue = 100*sin(wordAng);
-    wordAng += 0.1;
-
-    push();
-    stroke(0);
-    fill(255, 0, 0);
-    //draw a square at each point, and have it move according to sin/cos
-    for (let p of points) {
-        circle(p.x + xWaveValue, p.y + yWaveValue, 2);
-    }
-    pop();
-
-    push();
-    stroke(255);
-    noFill();
-    // draw an ellipse at each point
-    for (let p of points) {
-        circle(p.x + yWaveValue, p.y + xWaveValue, 10);
-    }
-    pop();
-
-    // oscillating r value
-    if (r > 255) {
-        rInc = -25;
-    }
-    if (r < 0) {
-        rInc = 25;
+    background(230, 150, 50, 20);
+    for (let i = 0; i < 20; i++) {
+        let x = 50 * i;
+        let y = 40 * i;
+        let size = 100;
+        let sampleFactor = 0.2;
+        let circSize = map(sin(frameCount/30), -1, 1, 3, 100);
+        w = new word(x, y, size, sampleFactor, circSize);
+        w.display();
     }
 
-    // increase r value
-    r += rInc;
+}
+
+class word {
+	constructor (x, y, size, sampleFactor, circSize) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.sampleFactor = sampleFactor;
+        this.circSize = circSize;
+	}
+	
+	display() {
+        textAlign(CENTER, CENTER);
+        textFont(font);
+        noFill();
+        stroke(120, 10, 220, 50);
+        strokeWeight(0.5);
+        textSize(this.size);
+        let points = font.textToPoints('DEASGHNÁTH', this.x, this.y, {
+            sampleFactor: this.sampleFactor });
+        for (let p of points) {
+            circle(p.x, p.y, this.circSize);
+        }
+	}
 }
 
 // BUTTONS 

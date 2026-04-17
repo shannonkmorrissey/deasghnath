@@ -24,9 +24,9 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  44 / misneach
-START: 2026.04.09 21:08
-END: 2026.04.10 03:22
+DAY  45 / análaigh
+START: 2026.04.16 21:52
+END: 2026.04.16
 
 google search:
 - 
@@ -38,17 +38,25 @@ claude prompt:
 - 
 
 p5js ref search:
-- classes
+- class
+- textDescent()
+- textToContours()
+- textToPoints()
+- frameCount()
 
 errors (not exhaustive):
-- lots of this one: Uncaught (in promise) Error: Extension context invalidated.
-- Uncaught TypeError: Class constructor sphere cannot be invoked without 'new'
-- Uncaught (in promise) Error: Extension context invalidated.
+- Uncaught SyntaxError: Identifier 'word' has already been declared (at sketch.js:16:1)
+- Uncaught (in promise) ReferenceError: points is not defined
+- Uncaught SyntaxError: Invalid or unexpected token (at sketch.js:14:28)
 
 summary:
-- prepared for algorave! i made so much progress tonight and I'm exhausted but also having the most fun.
-- I'm also stressed and worried I will suck and get a bunch of errors and have to give up! but i am also hopeful
-that it will be really fun and we'll just have a good time and everything will be okay.
+- i just tried things today! every edit i made was motivated by answering the question "what would happen if i did this?" and 
+it was so much fun. i could do this for hours. but i need to go to sleep.
+- TIL i can make a class and create the instance of the class in draw, so i can put it in a loop
+- the development/building process is becoming more enjoyable. starting from scratch,
+building something, adding variables, playing around with variables, putting it in a loop, playing around 
+with variables again, testing, responding, testing, responding. I'm really excited about where i ended up tonight.
+- i have to cut myself off bc i could go on forever!
 
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
@@ -62,3 +70,4 @@ programming concepts (I just want a place to collect what I know/help build my v
 - lists
 - system variables
 - incrementation operations
+- classes
