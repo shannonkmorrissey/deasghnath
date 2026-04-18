@@ -24,39 +24,36 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  45 / análaigh
-START: 2026.04.16 21:52
-END: 2026.04.16 23:44
+DAY  46 / polláire
+START: 2026.04.17 19:51
+END: 2026.04.17 21:20
 
 google search:
-- 
+- classes vs object p5js
+- should i create a custom function or a class if i want to create many of the same thing p5js
+- returning values in functions js
+- how to set a string parameter for a custom function js
+- can you create a custom function in js that passes an argument for a string that becomes the name of a new variable created in the function
 
 chatgpt prompt:
-- 
+- [with link to position page in p5js ref] getting error s.position is not a function
 
 claude prompt:
 - 
 
 p5js ref search:
-- class
-- textDescent()
-- textToContours()
-- textToPoints()
-- frameCount()
+- createSlider()
 
 errors (not exhaustive):
-- Uncaught SyntaxError: Identifier 'word' has already been declared (at sketch.js:16:1)
-- Uncaught (in promise) ReferenceError: points is not defined
-- Uncaught SyntaxError: Invalid or unexpected token (at sketch.js:14:28)
-
-summary:
-- i just tried things today! every edit i made was motivated by answering the question "what would happen if i did this?" and 
-it was so much fun. i could do this for hours. but i need to go to sleep.
-- TIL i can make a class and create the instance of the class in draw, so i can put it in a loop
-- the development/building process is becoming more enjoyable. starting from scratch,
-building something, adding variables, playing around with variables, putting it in a loop, playing around 
-with variables again, testing, responding, testing, responding. I'm really excited about where i ended up tonight.
-- i have to cut myself off bc i could go on forever!
+- Uncaught (in promise) TypeError: Assignment to constant variable.
+- Uncaught (in promise) ReferenceError: sliderObj is not defined
+- Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'position')
+- Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'value')
+- Uncaught (in promise) TypeError: s.value is not a function
+- Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'value')
+- Uncaught (in promise) TypeError: s.position is not a function
+- Uncaught (in promise) TypeError: slider1.position is not a function
+- Uncaught (in promise) ReferenceError: slider is not defined
 
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
