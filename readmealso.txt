@@ -24,37 +24,35 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  46 / polláire
-START: 2026.04.17 19:51
-END: 2026.04.17 21:20
+DAY  47 / dearg
+START: 2026.04.19 18:24
+END: 2026.04.19 19:33
 
 google search:
-- classes vs object p5js
-- should i create a custom function or a class if i want to create many of the same thing p5js
-- returning values in functions js
-- how to set a string parameter for a custom function js
-- can you create a custom function in js that passes an argument for a string that becomes the name of a new variable created in the function
+- can you pass a string into a parameter in a class that names a slider in p5js
+- how to get the value of a slider p5js
+- this.slider p5js
+- how to make text position outside of canvas p5js
 
 chatgpt prompt:
-- [with link to position page in p5js ref] getting error s.position is not a function
-
-claude prompt:
 - 
 
+claude prompt:
+- why does the following code give me the error that s.value() is not a function? [pasted code]
+- ^ This fixed it exactly...
+
 p5js ref search:
-- createSlider()
+- text()
+- p5.element.position()
+- createP()
+- frameRate()
 
 errors (not exhaustive):
-- Uncaught (in promise) TypeError: Assignment to constant variable.
-- Uncaught (in promise) ReferenceError: sliderObj is not defined
-- Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'position')
-- Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'value')
-- Uncaught (in promise) TypeError: s.value is not a function
-- Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'value')
-- Uncaught (in promise) TypeError: s.position is not a function
-- Uncaught (in promise) TypeError: slider1.position is not a function
-- Uncaught (in promise) ReferenceError: slider is not defined
-
+- Uncaught (in promise) TypeError: this.size is not a function
+- Uncaught (in promise) ReferenceError: s is not defined
+- Uncaught (in promise) TypeError: slider.value is not a function
+- Uncaught (in promise) ReferenceError: Cannot access 'x' before initialization
+- Uncaught (in promise) TypeError: x.value is not a function
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables
