@@ -7,31 +7,37 @@ async function setup() {
     // background(150);
     font = await loadFont('/assets/fonts/DynaPuff-Regular.ttf');
 
-    xPos = new slider('x position', 1, 100, 50, 1);
-    yPos = new slider('y position', 1, 300, 100, 1);
-    wordSize = new slider('size', 1, 300, 100, 1);
+    xPosSlider = new slider('x position', 1, 100, 50, 1);
+    yPosSlider = new slider('y position', 1, 300, 100, 1);
+    wordSizeSlider = new slider('size', -100, 300, 100, 1);
+    circleSlider = new slider('circle size', 1, 100, 50, 1);
+    sampFacSlider = new slider('sample factor', 0.1, 5, 0.5, 0.1);
+
 }
 
 function draw() {
-    background(230, 150, 50, 50);
+    background(230, 150, 50);
     for (let i = 0; i < 20; i++) {
-        let x = xPos.value() * i;
-        let y = yPos.value() * i;
-        let size = wordSize.value();
-        let sampleFactor = 0.5;
-        let circSize = map(sin(frameCount/5), -1, 1, 3, 100);
-        w = new word(x, y, size, sampleFactor, circSize);
+        let x = xPosSlider.value() * i;
+        let y = yPosSlider.value() * i;
+        let size = wordSizeSlider.value();
+        let sampleFactor = sampFacSlider.value();
+        let circSize = circleSlider.value();
+        w = new word('deasghnáth', x, y, size, sampleFactor, circSize);
         w.display();
     }
 
-    xPos.display(100, 100, 100);
-    yPos.display(100, 200, 100);
-    wordSize.display(100, 300, 100);
+    xPosSlider.display(100, 100, 100);
+    yPosSlider.display(100, 200, 100);
+    wordSizeSlider.display(100, 300, 100);
+    circleSlider.display(100, 400, 100);
+    sampFacSlider.display(100, 500, 100);
 
 }
 
 class word {
-	constructor (x, y, size, sampleFactor, circSize) {
+	constructor (word, x, y, size, sampleFactor, circSize) {
+        this.word = word;
         this.x = x;
         this.y = y;
         this.size = size;
@@ -46,7 +52,7 @@ class word {
         stroke(120, 10, 220, 30);
         strokeWeight(0.5);
         textSize(this.size);
-        let points = font.textToPoints('DEASGHNÁTH', this.x, this.y, {
+        let points = font.textToPoints(this.word, this.x, this.y, {
             sampleFactor: this.sampleFactor });
         for (let p of points) {
             circle(p.x, p.y, this.circSize);
@@ -65,8 +71,8 @@ class slider {
         this.slider.size(size);
         textSize(10);
         fill(0);
-        let myText = createP(this.name);
-        myText.position(x + 20, y + 20);
+        let myLabel = createP(this.name);
+        myLabel.position(x + 20, y + 20);
     }
 
     value() {

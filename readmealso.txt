@@ -24,35 +24,33 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  47 / dearg
-START: 2026.04.19 18:24
-END: 2026.04.19 19:33
+DAY  48 / gréasán
+START: 2026.04.20 22:13
+END: 2026.04.20 22:52
 
 google search:
-- can you pass a string into a parameter in a class that names a slider in p5js
-- how to get the value of a slider p5js
-- this.slider p5js
-- how to make text position outside of canvas p5js
+- 
 
 chatgpt prompt:
 - 
 
 claude prompt:
-- why does the following code give me the error that s.value() is not a function? [pasted code]
-- ^ This fixed it exactly...
+- 
 
 p5js ref search:
-- text()
-- p5.element.position()
-- createP()
-- frameRate()
+- 
 
 errors (not exhaustive):
-- Uncaught (in promise) TypeError: this.size is not a function
-- Uncaught (in promise) ReferenceError: s is not defined
-- Uncaught (in promise) TypeError: slider.value is not a function
-- Uncaught (in promise) ReferenceError: Cannot access 'x' before initialization
-- Uncaught (in promise) TypeError: x.value is not a function
+- Uncaught (in promise) TypeError: myLabel.position is not a function
+
+
+summary:
+- I'm having so much fun making sliders - i feel powerful lol. the logic
+is finally making sense to me. 
+- sliders are making iterating and exploring tweaking variables EXPONENTIALLY faster! 
+- i feel like I've made it to the next level. being able to change values 
+and test out how things look and animate so fast - i feel like I'm truly designing through
+code...
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables
@@ -66,3 +64,4 @@ programming concepts (I just want a place to collect what I know/help build my v
 - system variables
 - incrementation operations
 - classes
+- sliders
