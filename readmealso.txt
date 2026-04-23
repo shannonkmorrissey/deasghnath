@@ -24,12 +24,19 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  48 / gréasán
-START: 2026.04.20 22:13
-END: 2026.04.20 22:52
+DAY  49 / matamaitic
+START: 2026.04.22 21:52
+END: 2026.04.22 23:59
 
 google search:
-- 
+- p5js function to reset canvas
+- js function to refresh page
+- how to change text of button based on state js
+- simple html how to change text of button based on state js
+- get element by id not working
+- getelementbyid is not a function 
+- ^ lol learned it's case sensitive. first I had getElementbyID, which didn't work, then I had getElementbyId, which also didn't work. finally figured out through google that it has to be getElementById
+- moire
 
 chatgpt prompt:
 - 
@@ -38,19 +45,30 @@ claude prompt:
 - 
 
 p5js ref search:
-- 
+- createP()
+- shape primitives
 
 errors (not exhaustive):
-- Uncaught (in promise) TypeError: myLabel.position is not a function
-
+- sketch.js:16 Uncaught (in promise) ReferenceError: Cannot access 'x' before initialization
+- p5.min.js:1  HEAD http://127.0.0.1:5500/assets/fonts/Roboto-Regular.ttf net::ERR_ABORTED 404 (Not Found)
+- p5.min.js:1 Uncaught (in promise) NetworkError: A network error occurred.
+- You have encountered a HTTP error
+- sketch.js:57 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'textToPoints')
+- sketch.js:27 Uncaught (in promise) ReferenceError: circleSlider is not defined
+- Uncaught (in promise) ReferenceError: strokeWeightSlider is not defined
+- Uncaught (in promise) ReferenceError: h is not defined
+- Uncaught (in promise) ReferenceError: Cannot access 'y' before initialization
+- Uncaught ReferenceError: reset is not defined
+- Uncaught TypeError: document.getElementbyID is not a function
+- Uncaught TypeError: document.getElementbyId is not a function
 
 summary:
-- I'm having so much fun making sliders - i feel powerful lol. the logic
-is finally making sense to me. 
-- sliders are making iterating and exploring tweaking variables EXPONENTIALLY faster! 
-- i feel like I've made it to the next level. being able to change values 
-and test out how things look and animate so fast - i feel like I'm truly designing through
-code...
+- did a ton today, i couln't stop! i lost the word for a while, spent a while debugging, and it came back!
+- added more sliders.... i love them.
+- added a reset canvas button (it just reloads the page)
+- I'm essentially making a fun text tool and it's so exciting!!
+- now i just need to figure out how to get the sliders off the p5 canvas...
+- (30 min later) omg i could keep going for hours i need to stop and go to sleep
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables

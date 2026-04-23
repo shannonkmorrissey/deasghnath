@@ -1,61 +1,88 @@
 let running = true; // DO NOT DELETE
-let font;
+let font, x, y, size, sampleFactor, ptSize;
 
 async function setup() {
+    // fixed settings
     let cnv = createCanvas(800, 600);
     cnv.position(10, 10, 'fixed');
+    colorMode(HSB);
+
+    // mutable settings
     // background(150);
-    font = await loadFont('/assets/fonts/DynaPuff-Regular.ttf');
+    dynaPuff = await loadFont('/assets/fonts/DynaPuff-Regular.ttf');
+    spaceG = await loadFont('/assets/fonts/SpaceGrotesk-SemiBold.ttf');
+    
+    // create slider instances
+    xPosSlider = new slider('x position', (-width/2), (width + width/2), width/2, 1);
+    yPosSlider = new slider('y position', (-height/2), (height + height/2), height/2, 1);
+    wordSizeSlider = new slider('text size', 1, 1000, 100, 1);
+    ptSizeSlider = new slider('point size', 1, 300, 50, 1);
+    sampFacSlider = new slider('sample factor', 0.1, 3, 0.5, 0.1);
+    strokeHSlider = new slider('stroke hue', 0, 360, 0, 1);
+    strokeWeightSlider = new slider('stroke weight', 0.1, 5, 1, 0.1);
 
-    xPosSlider = new slider('x position', 1, 100, 50, 1);
-    yPosSlider = new slider('y position', 1, 300, 100, 1);
-    wordSizeSlider = new slider('size', -100, 300, 100, 1);
-    circleSlider = new slider('circle size', 1, 100, 50, 1);
-    sampFacSlider = new slider('sample factor', 0.1, 5, 0.5, 0.1);
-
-}
+}   
 
 function draw() {
-    background(230, 150, 50);
-    for (let i = 0; i < 20; i++) {
-        let x = xPosSlider.value() * i;
-        let y = yPosSlider.value() * i;
-        let size = wordSizeSlider.value();
-        let sampleFactor = sampFacSlider.value();
-        let circSize = circleSlider.value();
-        w = new word('deasghnáth', x, y, size, sampleFactor, circSize);
-        w.display();
-    }
+    background(0, 0, 60, 80);
+    let sliderY = 20; // sliders starting position
+    let sliderSpacing = 50;
 
-    xPosSlider.display(100, 100, 100);
-    yPosSlider.display(100, 200, 100);
-    wordSizeSlider.display(100, 300, 100);
-    circleSlider.display(100, 400, 100);
-    sampFacSlider.display(100, 500, 100);
+    // set variables as slider values
+    x = xPosSlider.value();
+    y = yPosSlider.value();
+    size = wordSizeSlider.value();
+    sampleFactor = sampFacSlider.value();
+    ptSize = ptSizeSlider.value();
+    h = strokeHSlider.value();
+    weight = strokeWeightSlider.value();
+
+    // create word instance and display word
+    push();
+    textAlign(CENTER, CENTER);
+    stroke(h, 100, 100, 20);
+    strokeWeight(weight);
+    noFill();
+    w = new word('deasghnáth');
+    w.display(x, y, size, sampleFactor, ptSize);
+    pop();
+    
+    // display sliders
+    xPosSlider.display(100, sliderY, 100);
+    sliderY += sliderSpacing;
+    yPosSlider.display(100, sliderY, 100);
+    sliderY += sliderSpacing;
+    wordSizeSlider.display(100, sliderY, 100);
+    sliderY += sliderSpacing;
+    ptSizeSlider.display(100, sliderY, 100);
+    sliderY += sliderSpacing;
+    sampFacSlider.display(100, sliderY, 100);
+    sliderY += sliderSpacing;
+    strokeHSlider.display(100, sliderY, 100);
+    sliderY += sliderSpacing;
+    strokeWeightSlider.display(100, sliderY, 100);
 
 }
 
+// CLASSES
+
 class word {
-	constructor (word, x, y, size, sampleFactor, circSize) {
+	constructor (word) {
         this.word = word;
+	}
+	
+	display(x, y, size, sampleFactor, ptSize) {
         this.x = x;
         this.y = y;
         this.size = size;
         this.sampleFactor = sampleFactor;
-        this.circSize = circSize;
-	}
-	
-	display() {
-        textAlign(CENTER, CENTER);
-        textFont(font);
-        noFill();
-        stroke(120, 10, 220, 30);
-        strokeWeight(0.5);
+        this.ptSize = ptSize;
+        textFont(dynaPuff);
         textSize(this.size);
-        let points = font.textToPoints(this.word, this.x, this.y, {
+        let points = dynaPuff.textToPoints(this.word, this.x, this.y, {
             sampleFactor: this.sampleFactor });
         for (let p of points) {
-            circle(p.x, p.y, this.circSize);
+            ellipse(p.x, p.y, 10, this.ptSize+20);
         }
 	}
 }
@@ -69,10 +96,11 @@ class slider {
     display(x, y, size) {
         this.slider.position(x, y);
         this.slider.size(size);
-        textSize(10);
+        textSize(12);
         fill(0);
-        let myLabel = createP(this.name);
-        myLabel.position(x + 20, y + 20);
+        textAlign(LEFT);
+        textFont(spaceG);
+        text(this.name + ": " + this.slider.value(), x - 10, y + 25);
     }
 
     value() {
@@ -90,12 +118,20 @@ function screenshot() {
 
 // starts and stops the sketch when button pressed
 function startStop() {
+    const btn = document.getElementById("toggleBtn");
     if (running) {
         noLoop();
+        btn.innerText = "Play"
         running = false;
     }
     else {
         loop();
+        btn.innerText = "Pause"
         running = true;
     }
+}
+
+// resets canvas
+function reset() {
+   location.reload();
 }
