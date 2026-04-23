@@ -12,7 +12,12 @@ body {
     background: rgb(255);
 }
 
-#button {
+#buttons {
     position: fixed;
     bottom: 10px;
+}
+
+#sliders {
+    position: fixed;
+    right: 20px;
 }

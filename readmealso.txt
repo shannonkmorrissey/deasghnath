@@ -24,19 +24,16 @@ a note on constraints: this is a work in progress, and I may alter these constra
 
 ***********************
 
-DAY  49 / matamaitic
-START: 2026.04.22 21:52
-END: 2026.04.22 23:59
+DAY  50 / grian
+START: 2026.04.23 10:54
+END: 2026.04.23 11:58
 
 google search:
-- p5js function to reset canvas
-- js function to refresh page
-- how to change text of button based on state js
-- simple html how to change text of button based on state js
-- get element by id not working
-- getelementbyid is not a function 
-- ^ lol learned it's case sensitive. first I had getElementbyID, which didn't work, then I had getElementbyId, which also didn't work. finally figured out through google that it has to be getElementById
-- moire
+- css id naming conventions
+- css id vs class
+- p5 2d primitives
+- does transparent background only work in webgl p5js
+- does alpha value in background only work in webgl p5js
 
 chatgpt prompt:
 - 
@@ -45,30 +42,39 @@ claude prompt:
 - 
 
 p5js ref search:
-- createP()
-- shape primitives
+- 
 
 errors (not exhaustive):
-- sketch.js:16 Uncaught (in promise) ReferenceError: Cannot access 'x' before initialization
-- p5.min.js:1  HEAD http://127.0.0.1:5500/assets/fonts/Roboto-Regular.ttf net::ERR_ABORTED 404 (Not Found)
-- p5.min.js:1 Uncaught (in promise) NetworkError: A network error occurred.
-- You have encountered a HTTP error
-- sketch.js:57 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'textToPoints')
-- sketch.js:27 Uncaught (in promise) ReferenceError: circleSlider is not defined
-- Uncaught (in promise) ReferenceError: strokeWeightSlider is not defined
-- Uncaught (in promise) ReferenceError: h is not defined
-- Uncaught (in promise) ReferenceError: Cannot access 'y' before initialization
-- Uncaught ReferenceError: reset is not defined
-- Uncaught TypeError: document.getElementbyID is not a function
-- Uncaught TypeError: document.getElementbyId is not a function
+- Uncaught (in promise) ReferenceError: fixed is not defined
+- Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'position')
+- Uncaught (in promise) TypeError: xPosSlider.display is not a function
+- Uncaught SyntaxError: missing ) after argument list (at sketch.js:70:17)
 
 summary:
-- did a ton today, i couln't stop! i lost the word for a while, spent a while debugging, and it came back!
-- added more sliders.... i love them.
-- added a reset canvas button (it just reloads the page)
-- I'm essentially making a fun text tool and it's so exciting!!
-- now i just need to figure out how to get the sliders off the p5 canvas...
-- (30 min later) omg i could keep going for hours i need to stop and go to sleep
+- refined the tool! it feels like an actual tool. i struggled a bit with the 
+position of the sliders (html/css) and still haven't figured out how to display the 
+slider values with the slider label text. the way it was before i had it display as part of the 
+class display function, but then bc the display was in draw, it would just 
+draw over the previous value every time i changed it. but if i put it in setup, then
+the value never changes. i think i can do it if i put the labels in the html
+file and connect the value somehow that's in the js file... idk. just intuition.
+i will try to figure it out. it's not perfect, but it's functional! and I feel like
+I've come a really long way after 50 sessions.
+- when I think about everything that can be done with creative coding, i get 
+overwhelmed and feel helpless because there's so much. but when i just compare
+myself to where I was yesterday and the day before, etc, I'm elated. I think this 
+learning journey, for me, has been neither faster nor slower than I expected.
+- I find it both fascinating and unsurprising that I created a tool. Fascinating because it wasn't my intention.
+I didnt set out to do this. This came out of the process and a desire to experiment. Unsurprising because I have a proclivity toward organization and control.
+With these sketches, I gravitated toward more efficient methods of testing, responding, and ultimately controling the output.
+-  This causing me to reflect on the nature of digital creative tools.
+In tools like illustrator etc., your options for creation are limited to what the tools' affordances.
+- If you make your own tools, you have much more freedom. But even with code, there are limitations (beyond my understanding of CS at this point).
+- I hope to continue this practice of spending time programming just to program and see what happens. 
+
+slán go fóill.
+
+<3 shannon
 
 programming concepts (I just want a place to collect what I know/help build my vocabular):
 - variables
