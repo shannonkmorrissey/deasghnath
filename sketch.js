@@ -1,6 +1,6 @@
 let running = true; // DO NOT DELETE
 let font, x, y, size, sampleFactor, ptSize;
-let myWord;
+let userInput;
 
 async function setup() {
     // fixed settings
@@ -9,18 +9,19 @@ async function setup() {
     colorMode(HSB);
 
     // mutable settings
-    // background(150);
+    background(150);
     dynaPuff = await loadFont('/assets/fonts/DynaPuff-Regular.ttf');
     spaceG = await loadFont('/assets/fonts/SpaceGrotesk-SemiBold.ttf');
 
     // create slider instances
     xPosSlider = new slider('x position', (-width/2), (width + width/2), width/2, 1);
     yPosSlider = new slider('y position', (-height/2), (height + height/2), height/2, 1);
-    wordSizeSlider = new slider('text size', 1, 1000, 100, 1);
-    ptSizeSlider = new slider('point size', 1, 300, 50, 1);
-    sampFacSlider = new slider('sample factor', 0.05, 3, 0.5, 0.05);
+    wordSizeSlider = new slider('text size', 1, 1000, 60, 1);
+    ptSizeSlider = new slider('point size', 1, 300, 3, 1);
+    sampFacSlider = new slider('sample factor', 0.01, 1, 0.5, 0.01);
     strokeHSlider = new slider('stroke hue', 0, 360, 0, 1);
     strokeWeightSlider = new slider('stroke weight', 0.1, 10, 1, 0.1);
+    trackingSlider = new slider('tracking', -10, 10, 0, 1);
 
     // display sliders
     let sliderY = 20; // sliders starting position
@@ -38,13 +39,28 @@ async function setup() {
     strokeHSlider.display(100, sliderY, 100);
     sliderY += sliderSpacing;
     strokeWeightSlider.display(100, sliderY, 100);
+    sliderY += sliderSpacing;
+    trackingSlider.display(100, sliderY, 100);
 
-    myWord = promptUser();
+    userInput = createInput('[your word or phrase]');
+    userInput.position(310, 630, 'fixed');
+    let inputLabel = createP('Enter a word or phrase');
+    inputLabel.position(310, 660, 'fixed');
+
 }   
 
 function draw() {
-    background(0, 0, 80, 10);
-    // clear();
+    background(0, 0, 100);
+    push();
+        stroke(0);
+        strokeWeight(1);
+        noFill();
+        line(0, 0, width, 0);
+        line(width, 0, width, height);
+        line(width, height, 0, height);
+        line(0, height, 0, 0);
+    pop();
+
     // set variables as slider values
     x = xPosSlider.value();
     y = yPosSlider.value();
@@ -53,15 +69,16 @@ function draw() {
     ptSize = ptSizeSlider.value();
     h = strokeHSlider.value();
     weight = strokeWeightSlider.value();
+    tracking = trackingSlider.value();
 
     // create word instance and display word
     push();
-    textAlign(CENTER, CENTER);
-    stroke(h, 100, 100, 20);
+    stroke(h, 100, 100);
+    // fill(h, 100, 100);
     strokeWeight(weight);
     noFill();
-    w = new word(myWord);
-    w.display(x, y, size, sampleFactor, ptSize);
+    w = new word(userInput.value());
+    w.display(x, y, size, sampleFactor, ptSize, tracking);
     pop();
 }
 
@@ -78,15 +95,16 @@ class word {
         this.word = word;
 	}
 	
-	display(x, y, size, sampleFactor, ptSize) {
+	display(x, y, size, sampleFactor, ptSize, tracking) {
         this.x = x;
         this.y = y;
         this.size = size;
         this.sampleFactor = sampleFactor;
         this.ptSize = ptSize;
-        textFont(dynaPuff);
+        this.tracking = tracking;
         textSize(this.size);
-        let points = dynaPuff.textToPoints(this.word, this.x, this.y, {
+        textAlign(CENTER, CENTER);
+        let points = spaceG.textToPoints(this.word, this.x, this.y, {
             sampleFactor: this.sampleFactor });
         for (let p of points) {
             circle(p.x, p.y, this.ptSize);
@@ -101,14 +119,13 @@ class slider {
     }
 
     display(x, y, size) {
-        this.slider.position(windowWidth - 150 , y, 'fixed');
+        this.slider.position(930, y, 'fixed');
         this.slider.size(size);
         textSize(12);
         fill(0);
-        textAlign(RIGHT);
         textFont(spaceG);
-        let sliderLabel = createP(this.name + ": " + this.slider.value());
-        sliderLabel.position(windowWidth - 150, y + 20);
+        let sliderLabel = createP(this.name);
+        sliderLabel.position(830, y, 'fixed');
     }
 
     value() {
